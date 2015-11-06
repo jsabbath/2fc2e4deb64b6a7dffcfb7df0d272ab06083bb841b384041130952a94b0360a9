@@ -85,13 +85,13 @@
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a data-toggle="modal" data-target="#ModalCRURegLaboral" href="" data Targe>Agregar Regimen Laboral</a>
+                                    <a data-toggle="modal" data-target="#ModalCRURegLaboral" href="" data Targe>Regimen Laboral</a>
                                 </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="#ModalRegEmpleado" href="">Agregar Empleado</a>
+                                    <a data-toggle="modal" data-target="#ModalRegEmpleado" href="">Personal</a>
                                 </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="" href="">Agregar Vacacion / Permiso</a>
+                                    <a data-toggle="modal" data-target="" href="">Vacaciones / Permiso</a>
                                 </li>
                                 <li>
                                     <a data-toggle="modal" data-target="#ModalCRUArea" href="">Area / Permiso</a>
@@ -307,6 +307,10 @@
                     <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#ModalCRURegLaboral"> 
                         <i class="fa fa-edit "></i>
                         Registar Regimen Laboral
+                    </button>
+                    <button class="btn btn btn-primary btn-sm" data-toggle="modal" data-target="#ModalCRUArea">
+                      <i class="fa fa-edit "></i>
+                        Area
                     </button>
 
                 </div>
