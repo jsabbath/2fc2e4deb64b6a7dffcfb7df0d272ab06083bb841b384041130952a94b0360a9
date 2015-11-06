@@ -8,40 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Control Vacacional</title>
-
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
     <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
-
-    <!-- DataTables CSS -->
     <link href="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
-
-    <!-- DataTables Responsive CSS -->
     <link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    
 </head>
-
 <body>
-
     <div id="wrapper">
-
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -53,8 +31,8 @@
                 </button>
                 <a class="navbar-brand" href="">Control Vacacional v0.1</a>
             </div>
-            <!-- /.navbar-header -->
 
+            <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -107,16 +85,16 @@
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="">Agregar Regimen Laboral</a>
+                                    <a data-toggle="modal" data-target="#ModalCRURegLaboral" href="" data Targe>Agregar Regimen Laboral</a>
                                 </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="#myModal" href="">Agregar Empleado</a>
+                                    <a data-toggle="modal" data-target="#ModalRegEmpleado" href="">Agregar Empleado</a>
                                 </li>
                                 <li>
-                                    <a href="">Agregar Vacacion / Permiso</a>
+                                    <a data-toggle="modal" data-target="" href="">Agregar Vacacion / Permiso</a>
                                 </li>
                                 <li>
-                                    <a href="login.php">Cerrar Sesion</a>
+                                    <a data-toggle="modal" data-target="" href="login.php">Cerrar Sesion</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -136,15 +114,9 @@
                 <!-- /.col-lg-12 -->
             </div>
             <div class="row">
-                <div class="col-lg-12 ">
-                    
-                    <!--Tougle RegistroEmpleado-->
-                        <button class="btn btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
-                          <i class="fa fa-edit "></i>
-                            Registrar empleado
-                        </button>
-
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="col-lg-12 ">                    
+                    <!--rmodel registrar empleado-->
+                        <div class="modal fade" id="ModalRegEmpleado" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -155,23 +127,18 @@
                                         <form role="form">
                                         <div class="form-group">
                                             <label class="control-label" for="inputSuccess">Nombres y Apellidos</label>
-                                            <input class="form-control" id="inputSuccess" type="text" placeholder="Ingrese nombres">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label" for="inputWarning">Corte Superior</label>
-                                            <input class="form-control" id="inputWarning" type="text">
+                                            <div class="row center-block">
+                                                <input class="" id="inputSuccess" type="text" placeholder="Ingrese nombres" required>    
+                                                <input class="" id="inputSuccess" type="text" placeholder="Ingrese apellidos" required>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label" for="inputError">Escalofon</label>
                                             <input class="form-control" id="inputError" type="text">
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label" for="inputError">Fecha inicio</label>
-                                            <input class="form-control" id="inputError" type="text">
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label" for="inputError">Fecha Fin</label>
-                                            <input class="form-control" id="inputError" type="text">
+                                        <div class="form-group"><!--para seguridad-->
+                                            <input type="hidden" id="name_tockenn" value="">
+
                                         </div>
                                     </form>
                                     </div>
@@ -183,12 +150,56 @@
                             </div>
                         </div>
                     <!--fin tabla empleado-->
+                    <!--rmodel registrar empleado-->
+                        <div class="modal litle" id="ModalCRURegLaboral" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title" id="myModalLabel">Registrar Regimen Laboral</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="row center-block">
+                                                <div class="col-md-4" id="">
+                                                    Descripcion 
+                                                </div>
+                                                <div class="col-md-8 center-block">
+                                                    <input type="text" placeholder="Ingrese denominacion" id="#vcdescripcion" required>
+                                                </div>
+                                            </div>
+                                            <div class="row center-block">
+                                                <div class="col-md-4">
+                                                    Observaciones 
+                                                </div>
+                                                <div>
+                                                    <input type="text" placeholder="Ingrese observaciones" id="#vcobservaciones" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><!--para seguridad-->
+                                                <input type="hidden" id="name_tockenn" value="">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
 
-                    <button type="button" class="btn btn-danger btn-sm"> 
+                    <!--Tougle RegistroEmpleado-->
+                    <button class="btn btn btn-primary btn-sm" data-toggle="modal" data-target="#ModalRegEmpleado">
+                      <i class="fa fa-edit "></i>
+                        Registrar Empleado
+                    </button>
+                    <!--fin tabla empleado-->
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#"> 
                         <i class="fa fa-edit "></i>
                         Registar Vacacion
                     </button>
-                    <button type="button" class="btn btn-warning btn-sm"> 
+                    <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#ModalCRURegLaboral"> 
                         <i class="fa fa-edit "></i>
                         Registar Regimen Laboral
                     </button>
@@ -215,16 +226,16 @@
                                     </thead>
                                     <tbody>
                                         <tr class="odd gradeX">
-                                            <td>Rodrigo Andres Valeunde Tinoco</td>
-                                            <td>Logistica / 728</td>
-                                            <td>12/12/2008</td>
-                                            <td class="center">12/12/2002</td>
-                                            <td class="center">
+                                            <td id="">Rodrigo Andres Valeunde Tinoco</td> <!--nombre-->
+                                            <td id="">Logistica / 728</td>
+                                            <td id="">12/12/2008</td>
+                                            <td id="" class="center">12/12/2002</td>
+                                            <td id="" class="center">
                                                 <input type="button" value="Editar" class="btn btn-danger btn-xs">
                                                 <input type="button" value="Exportar" class="btn btn-success btn-xs">
                                             </td>
                                         </tr>
-                                        <tr class="even gradeC">
+                                        <!--tr class="even gradeC">
                                             <td>Andres del Carpio sandoval</td>
                                             <td>RR.UU. / 1017</td>
                                             <td>14/01/1999</td>
@@ -394,7 +405,7 @@
                                                 <input type="button" value="Editar" class="btn btn-danger btn-xs">
                                                 <input type="button" value="Exportar" class="btn btn-success btn-xs">
                                             </td>
-                                        </tr>
+                                        </tr-->
                                     </tbody>
                                 </table>
                             </div>
