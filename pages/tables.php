@@ -94,6 +94,9 @@
                                     <a data-toggle="modal" data-target="" href="">Agregar Vacacion / Permiso</a>
                                 </li>
                                 <li>
+                                    <a data-toggle="modal" data-target="#ModalCRUArea" href="">Area / Permiso</a>
+                                </li>
+                                <li>
                                     <a data-toggle="modal" data-target="" href="login.php">Cerrar Sesion</a>
                                 </li>
                             </ul>
@@ -224,7 +227,73 @@
                                 </div>
                             </div>
                        </div>
-
+                    
+                    <!--rmodel Registrar Area-->
+                        <div class="modal litle" id="ModalCRUArea" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title" id="myModalLabel">Registrar Area</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="row center-block">
+                                                <div class="col-md-4" id="">
+                                                    Nombre 
+                                                </div>
+                                                <div class="col-md-8 center-block">
+                                                    <input type="text" placeholder="Ingrese Nombre del Area" id="#vcnombre" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><!--para seguridad-->
+                                                <input type="hidden" id="name_tockenn" value="">
+                                            </div>
+                                        </form>
+                                         <!-- /.tabla regimen laboral existentes -->
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="panel panel-default">
+                                                    <!-- /.panel-heading -->
+                                                    <div class="panel-body">
+                                                        <div class="dataTable_wrapper">
+                                                            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Area</th>
+                                                                        <th>Nombre</th>
+                                                                        <th>Opciones</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="odd gradeX">
+                                                                        <td id="">R728</td> <!--nombre-->
+                                                                        <td id="">Comprnde del tipo de contrato xs</td>
+                                                                        <td id="" class="center">
+                                                                            <input type="button" value="Editar" class="btn btn-danger btn-xs">
+                                                                            <input type="button" value="Exportar" class="btn btn-success btn-xs">
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.panel-body -->
+                                                </div>
+                                                <!-- /.panel -->
+                                            </div>
+                                            <!-- /.col-lg-12 -->
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary btn-xs">Guardar</button>
+                                        <button type="button" class="btn btn-warning btn-xs">Actualizar</button>
+                                        <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                       
                     <!--Tougle RegistroEmpleado-->
                     <button class="btn btn btn-primary btn-sm" data-toggle="modal" data-target="#ModalRegEmpleado">
                       <i class="fa fa-edit "></i>
