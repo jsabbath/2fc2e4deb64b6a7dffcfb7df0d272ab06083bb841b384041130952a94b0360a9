@@ -182,8 +182,9 @@
                                         </form>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                                         <button type="button" class="btn btn-primary">Guardar</button>
+                                        <button type="button" class="btn btn-warning">Actualizar</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                                     </div>
                                 </div>
                             </div>
@@ -541,6 +542,12 @@
         });
     });
     </script>
+
+    <style type="text/css">
+        #ModalCRURegLaboral.modal-dialog{
+            width: 40% !important;
+        }
+    </style>
 
 </body>
 </html>
