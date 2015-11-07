@@ -386,8 +386,6 @@
                                                     <ul class="dropdown-menu">
                                                         <li><a href="#">TI</a></li>
                                                         <li><a href="#">Seguridad de informacion</a></li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="#"><span class="glyphicon glyphicon-star"></span> Otro</a></li>
                                                     </ul>
                                                </div>
                                             </div>
