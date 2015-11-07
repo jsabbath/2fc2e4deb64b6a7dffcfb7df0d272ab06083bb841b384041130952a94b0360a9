@@ -131,7 +131,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                        <h4 class="modal-title" id="myModalLabel">Registrar Empleado</h4>
+                                        <h4 class="modal-title" id="myModalLabel">Empleado</h4>
                                     </div>
                                     <div class="modal-body">
                                         <form role="form">
@@ -241,7 +241,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                        <h4 class="modal-title" id="myModalLabel">Registrar Area</h4>
+                                        <h4 class="modal-title" id="myModalLabel">Area</h4>
                                     </div>
                                     <div class="modal-body">
                                         <form>
@@ -307,7 +307,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                        <h4 class="modal-title" id="myModalLabel">Registrar Periodo</h4>
+                                        <h4 class="modal-title" id="myModalLabel">Periodo</h4>
                                     </div>
                                     <div class="modal-body">
                                         <form>
