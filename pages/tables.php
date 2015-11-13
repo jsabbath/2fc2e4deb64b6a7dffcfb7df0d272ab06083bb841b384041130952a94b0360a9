@@ -34,18 +34,6 @@
 
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <!-- /.dropdown-messages -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                </li>
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -138,8 +126,8 @@
                                         <div class="form-group">
                                             <label class="control-label" for="inputSuccess">Nombres y Apellidos</label>
                                             <div class="row center-block">
-                                                <input class="" id="inputSuccess" type="text" placeholder="Ingrese nombres" required>    
-                                                <input class="" id="inputSuccess" type="text" placeholder="Ingrese apellidos" required>
+                                                <input class="form-control col-xs-3 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese nombres" required>    
+                                                <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese apellidos" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -174,8 +162,8 @@
                                                 <div class="col-md-4" id="">
                                                     Descripcion 
                                                 </div>
-                                                <div class="col-md-8 center-block">
-                                                    <input type="text" placeholder="Ingrese denominacion" id="#vcdescripcion" required>
+                                                <div class="col-md-8 center-block ">
+                                                    <input class="form-control" type="text" placeholder="Ingrese denominacion" id="#vcdescripcion" required>
                                                 </div>
                                             </div>
                                             <br>
@@ -183,8 +171,8 @@
                                                 <div class="col-md-4">
                                                     Observaciones 
                                                 </div>
-                                                <div>
-                                                    <input type="textarea" placeholder="Ingrese observaciones" id="#vcobservaciones" required>
+                                                <div class="col-md-8 center-block ">
+                                                    <input type="text" class="form-control" placeholder="Ingrese observaciones" id="#vcobservaciones" required>
                                                 </div>
                                             </div>
                                             <div class="form-group"><!--para seguridad-->
@@ -316,7 +304,7 @@
                                                     Descripcion 
                                                 </div>
                                                 <div class="col-md-8 center-block">
-                                                    <input type="text" placeholder="Ingrese denominacion" id="#vcPeriodoDescripcion" required>
+                                                    <input class="form-control" type="text" placeholder="Ingrese denominacion" id="#vcPeriodoDescripcion" required>
                                                 </div>
                                             </div>
                                             <br>
@@ -391,11 +379,11 @@
                                             </div>
                                             <br>
                                             <div class="row center-block">
-                                                <div class="col-md-4">
+                                                <div class="col-md-4 center-block">
                                                     Observaciones 
                                                 </div>
-                                                <div>
-                                                    <input type="text" placeholder="Ingrese observaciones" id="#vcCargoNombre" required>
+                                                <div class="col-md-8 center-block">
+                                                    <input type="text" class="form-control" placeholder="Ingrese observaciones" id="#vcCargoNombre" required>
                                                 </div>
                                             </div>
                                             <div class="form-group"><!--para seguridad-->
@@ -502,177 +490,7 @@
                                                 <input type="button" value="Exportar" class="btn btn-success btn-xs">
                                             </td>
                                         </tr>
-                                        <!--tr class="even gradeC">
-                                            <td>Andres del Carpio sandoval</td>
-                                            <td>RR.UU. / 1017</td>
-                                            <td>14/01/1999</td>
-                                            <td class="center">23/10/2002</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
-                                        <tr class="odd gradeA">
-                                            <td>Luz maria del solar</td>
-                                            <td>TI / 1057</td>
-                                            <td>23/02/1015</td>
-                                            <td class="center">23/08/1015</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
                                         
-                                        <tr class="gradeA">
-                                            <td>Aquiles brinco rapido</td>
-                                            <td>Logistica / 728</td>
-                                            <td>03/08/1995</td>
-                                            <td class="center">23/08/2009</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Alan Garcia Solazo</td>
-                                            <td>Almacen / 1017</td>
-                                            <td>15/08/1990</td>
-                                            <td class="center">23/08/1992</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Loida Mezquino Ricther</td>
-                                            <td>Marketing / 728</td>
-                                            <td>13/03/2010</td>
-                                            <td class="center">23/09/1015</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Andrea Lizeth Atuhuaman jurad</td>
-                                            <td>Almacen / 728</td>
-                                            <td>09/09/2009</td>
-                                            <td class="center">10/10/2015</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
-                                        <tr class="gradeX">
-                                            <td>Juan Carlos de  Las casas del Toro</td>
-                                            <td>RRHH / 1017</td>
-                                            <td>12/02/2000</td>
-                                            <td class="center">23/08/2002</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
-                                        <tr class="gradeC">
-                                            <td>Victor Luck Uzumaki Mazgo</td>
-                                            <td>Logistica / 1017</td>
-                                            <td>13/05/2000</td>
-                                            <td class="center">12/08/2002</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
-                                        <tr class="gradeC">
-                                            <td>Han solo Verger piñas</td>
-                                            <td>Almacen / 1017</td>
-                                            <td>09/08/2003</td>
-                                            <td class="center">23/08/2002</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Celene Margit levano soriano</td>
-                                            <td>Marketing / 728</td>
-                                            <td>12/03/1994</td>
-                                            <td class="center">23/08/2002</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
-                                        <tr class="gradeA">
-                                            <td>Melani Mallqui Celestino</td>
-                                            <td>Marketing / 728</td>
-                                            <td>15/12/2014</td>
-                                            <td class="center">23/08/2002</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
-                                        <tr class="gradeX">
-                                            <td>Ricardo Casas Montes</td>
-                                            <td>RRHH / 728</td>
-                                            <td>12/13/2002</td>
-                                            <td class="center">23/08/2002</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
-                                        <tr class="gradeX">
-                                            <td>Rita Vazquez Cordova</td>
-                                            <td>TI / 1057</td>
-                                            <td>15/05/2005</td>
-                                            <td class="center">23/08/2002</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
-                                        <tr class="gradeX">
-                                            <td>Cielo Latini Montalvan</td>
-                                            <td>RRHH / 728</td>
-                                            <td>13/12/2003</td>
-                                            <td class="center">23/08/2002</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
-                                        <tr class="gradeC">
-                                            <td>Lucas Meltrozo Briano</td>
-                                            <td>Marketing / 728</td>
-                                            <td>12/12/2009</td>
-                                            <td class="center">23/08/2002</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
-                                        <tr class="gradeC">
-                                            <td>Cipriano Solan Asquilete</td>
-                                            <td>RRHH / 728</td>
-                                            <td>11/11/2010</td>
-                                            <td class="center">23/08/2002</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
-                                        <tr class="gradeU">
-                                            <td>Other browsers</td>
-                                            <td>TI / 1010</td>
-                                            <td>12/12/1994</td>
-                                            <td class="center">23/08/2002</td>
-                                            <td class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr-->
                                     </tbody>
                                 </table>
                             </div>
@@ -685,96 +503,7 @@
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Kitchen Sink
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Username</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Basic Table
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Username</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
+                
                 </div>
                 <!-- /.col-lg-6 -->
             </div>
@@ -821,6 +550,7 @@
     <style type="text/css">
         #ModalCRURegLaboral.modal-dialog{
             width: 40% !important;
+
         }
     </style>
 
