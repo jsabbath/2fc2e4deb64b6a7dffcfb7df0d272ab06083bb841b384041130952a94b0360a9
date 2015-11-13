@@ -162,7 +162,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <form>
-                                            <div class="row center-block">
+                                            <div class="row">
                                                 <div class="col-md-4" id="">
                                                     Descripcion 
                                                 </div>
@@ -171,7 +171,7 @@
                                                 </div>
                                             </div>
                                             <br>
-                                            <div class="row center-block">
+                                            <div class="row">
                                                 <div class="col-md-4">
                                                     Observaciones 
                                                 </div>
@@ -370,7 +370,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <form>
-                                            <div class="row center-block">
+                                            <div class="row col-md-12">
                                                 <div class="col-md-4" id="">
                                                     Area 
                                                 </div>
