@@ -125,9 +125,13 @@
                                         <form role="form">
                                         <div class="form-group">
                                             <label class="control-label" for="inputSuccess">Nombres y Apellidos</label>
-                                            <div class="row center-block">
-                                                <input class="form-control col-xs-3 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese nombres" required>    
-                                                <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese apellidos" required>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <input class="form-control col-xs-3 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese Nombres" required>    
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese Apellidos" required>
+                                                </div>                                                
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -238,7 +242,7 @@
                                                     Nombre 
                                                 </div>
                                                 <div class="col-md-8 center-block">
-                                                    <input type="text" placeholder="Ingrese Nombre del Area" id="#vcnombre" required>
+                                                    <input type="text" class="form-control" placeholder="Ingrese Nombre del Area" id="#vcnombre" required>
                                                 </div>
                                             </div>
                                             <div class="form-group"><!--para seguridad-->
