@@ -140,7 +140,6 @@
                                         </div>
                                         <div class="form-group"><!--para seguridad-->
                                             <input type="hidden" id="name_tockenn" value="">
-
                                         </div>
                                     </form>
                                     </div>
@@ -179,8 +178,9 @@
                                                     <input type="text" class="form-control" placeholder="Ingrese observaciones" id="#vcobservaciones" required>
                                                 </div>
                                             </div>
-                                            <div class="form-group"><!--para seguridad-->
-                                                <input type="hidden" id="name_tockenn" value="">
+                                            <div class="form-group">
+                                                <!--para seguridad-->
+                                                <input type="hidden" id="name_tocken" value="">
                                             </div>
                                         </form>
                                          <!-- /.tabla regimen laboral existentes -->
@@ -359,6 +359,44 @@
                                 </div>
                             </div>
                        </div>
+
+                        <!--rmodel registrar empleado-->
+                        <div class="modal fade" id="ModalCRUVacacion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title" id="myModalLabel">Registrar Vacacion</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form role="form">
+                                        <div class="form-group">
+                                            <label class="control-label" for="inputSuccess">Nombres y Apellidos</label>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <input class="form-control col-xs-3 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese Nombres" required>    
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese Apellidos" required>
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label" for="inputError">Escalofon</label>
+                                            <input class="form-control" id="inputError" type="text">
+                                        </div>
+                                        <div class="form-group"><!--para seguridad-->
+                                            <input type="hidden" id="name_tockenn" value="">
+                                        </div>
+                                    </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                        
                        <!--rmodel registrar cargo-->
                         <div class="modal litle" id="ModalCRUCargo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -374,20 +412,19 @@
                                                 <div class="col-md-4" id="">
                                                     Area 
                                                 </div>
-                                               <div class="btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Seleciona un Area <span class="caret"></span></a>
+                                               <div class="col-md-8 btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Seleciona un Area <span class="caret"></span></a>
                                                     <ul class="dropdown-menu">
                                                         <li><a href="#">TI</a></li>
                                                         <li><a href="#">Seguridad de informacion</a></li>
                                                     </ul>
                                                </div>
                                             </div>
-                                            <br>
-                                            <div class="row center-block">
-                                                <div class="col-md-4 center-block">
+                                            <div class="row col-md-12">
+                                                <div class="col-md-4">
                                                     Observaciones 
                                                 </div>
-                                                <div class="col-md-8 center-block">
-                                                    <input type="text" class="form-control" placeholder="Ingrese observaciones" id="#vcCargoNombre" required>
+                                                <div class="col-md-8">
+                                                    <input type="text" class="form-control" placeholder="Ingrese Observaciones" id="#vcCargoNombre" required>
                                                 </div>
                                             </div>
                                             <div class="form-group"><!--para seguridad-->
@@ -443,26 +480,11 @@
                         Registrar Empleado
                     </button>
                     <!--fin tabla empleado-->
-                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#"> 
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#ModalCRUVacacion"> 
                         <i class="fa fa-edit "></i>
                         Registar Vacacion
                     </button>
-                    <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#ModalCRURegLaboral"> 
-                        <i class="fa fa-edit "></i>
-                        Registar Regimen Laboral
-                    </button>
-                    <button class="btn btn btn-primary btn-sm" data-toggle="modal" data-target="#ModalCRUArea">
-                      <i class="fa fa-edit "></i>
-                        Area
-                    </button>
-                    <button class="btn btn btn-danger btn-sm" data-toggle="modal" data-target="#ModalCRUPeriodo">
-                      <i class="fa fa-edit "></i>
-                        Periodo
-                    </button>
-                    <button class="btn btn btn-primary btn-sm" data-toggle="modal" data-target="#ModalCRUCargo">
-                      <i class="fa fa-edit "></i>
-                        Cargo
-                    </button>
+                    
                 </div>
             </div>
             <br>
@@ -494,7 +516,6 @@
                                                 <input type="button" value="Exportar" class="btn btn-success btn-xs">
                                             </td>
                                         </tr>
-                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -554,9 +575,7 @@
     <style type="text/css">
         #ModalCRURegLaboral.modal-dialog{
             width: 40% !important;
-
         }
     </style>
-
 </body>
 </html>
