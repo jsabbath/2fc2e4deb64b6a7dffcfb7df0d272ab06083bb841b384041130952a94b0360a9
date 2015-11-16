@@ -371,14 +371,11 @@
                                     <div class="modal-body">
                                         <form role="form">
                                         <div class="form-group">
-                                            <label class="control-label" for="inputSuccess">Nombres y Apellidos</label>
+                                            <label class="control-label" for="inputSuccess">Generales del Empleado</label>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <input class="form-control col-xs-3 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese Nombres" required>    
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese Apellidos" required>
-                                                </div>                                                
+                                                </div>                                               
                                             </div>
                                         </div>
                                         <div class="form-group">
