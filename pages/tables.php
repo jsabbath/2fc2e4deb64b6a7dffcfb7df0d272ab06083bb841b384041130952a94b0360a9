@@ -50,6 +50,9 @@
                         </li>
                         <li class="divider"></li>
                         <li><a href="login.php"><i class="fa fa-sign-out fa-fw"></i> Cerrar Sesion</a>
+                        <?php 
+                           require_once('include/sesion_start.php'); //invoca
+                         ?>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -167,7 +170,7 @@
                             </div>
                         </div>
                     <!--fin tabla empleado-->
-                    <!--rmodel registrar empleado-->
+                    <!--rmodel registrar reglaboral-->
                         <div class="modal litle" id="ModalCRURegLaboral" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
