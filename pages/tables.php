@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
 
     <meta charset="utf-8">
@@ -37,10 +36,15 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user fa-fw"></i>  
+                        <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> Admin 0001</a>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i>
+                            <?php 
+                            echo $user;
+                             ?>
+                        </a>
                         </li>
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuracion</a>
                         </li>
@@ -64,7 +68,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="tables.php"><i class="fa fa-table fa-fw"></i>Lista de Empleados</a>
+                            <a href="tables.php"><i class="fa fa-table fa-fw"></i>Lista de Personal</a>
                         </li>
                         <li>
                             <a href="#">
@@ -107,7 +111,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="page-header">Lista de Trabajadores </h2>
+                    <h2 class="page-header">Personal Laboral</h2>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -119,27 +123,39 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                        <h4 class="modal-title" id="myModalLabel">Empleado</h4>
+                                        <h4 class="modal-title" id="myModalLabel">Personal Laboral</h4>
                                     </div>
                                     <div class="modal-body">
                                         <form role="form">
                                         <div class="form-group">
                                             <label class="control-label" for="inputSuccess">Nombres y Apellidos</label>
                                             <div class="row">
+                                                <div class="col-md-12">
+                                                    <input class="form-control col-xs-3 col-sm-3" id="inputSuccess" type="text" placeholder="Nombres Completos" required>    
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
                                                 <div class="col-md-6">
-                                                    <input class="form-control col-xs-3 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese Nombres" required>    
+                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Apellido Paterno" required>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese Apellidos" required>
-                                                </div>                                                
+                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Apellido Materno" required>
+                                                </div> 
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label" for="inputError">Escalofon</label>
-                                            <input class="form-control" id="inputError" type="text">
-                                        </div>
-                                        <div class="form-group"><!--para seguridad-->
+                                            <br>
+                                            <div class="row">
+                                                <div class="form-group col-md-6">
+                                                    <label class="control-label" for="inputError">Escalofon</label>
+                                                    <input class="form-control" id="inputError" type="text" placeholder='Ingrese escalofon' requires>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label class="control-label" for="inputError">DNI</label>
+                                                    <input class="form-control" id="inputError" type="text" placeholder="ingrese DNI" required>
+                                                </div>
+                                            </div>                                        <div class="form-group"><!--para seguridad-->
                                             <input type="hidden" id="name_tockenn" value="">
+                                        </div>
                                         </div>
                                     </form>
                                     </div>
@@ -160,69 +176,84 @@
                                         <h4 class="modal-title" id="myModalLabel">Regimen Laboral</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <form>
+                                        <!--*****************************FORMULARIO*******************************-->
+                                        <form action="include/registros.php" method="GET">
                                             <div class="row">
                                                 <div class="col-md-4" id="">
-                                                    Descripcion 
+                                                    Nuevo Regimen 
                                                 </div>
                                                 <div class="col-md-8 center-block ">
-                                                    <input class="form-control" type="text" placeholder="Ingrese denominacion" id="#vcdescripcion" required>
+                                                    <input class="form-control" type="text" placeholder="Ingrese denominacion" id="" name='vcdescripcion' required>
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="row">
                                                 <div class="col-md-4">
-                                                    Observaciones 
+                                                    Descripcion 
                                                 </div>
                                                 <div class="col-md-8 center-block ">
-                                                    <input type="text" class="form-control" placeholder="Ingrese observaciones" id="#vcobservaciones" required>
+                                                    <input type="text" class="form-control" placeholder="Ingrese observaciones" id="" name='rvcobservaciones' required>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <!--para seguridad-->
                                                 <input type="hidden" id="name_tocken" value="">
                                             </div>
-                                        </form>
-                                         <!-- /.tabla regimen laboral existentes -->
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="panel panel-default">
-                                                    <!-- /.panel-heading -->
-                                                    <div class="panel-body">
-                                                        <div class="dataTable_wrapper">
-                                                            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>Regimen </th>
-                                                                        <th>Descripcion</th>
-                                                                        <th>Opciones</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr class="odd gradeX">
-                                                                        <td id="">R728</td> <!--nombre-->
-                                                                        <td id="">Comprnde del tipo de contrato xs</td>
-                                                                        <td id="" class="center">
-                                                                            <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                                            <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
+                                                <!-- /.tabla regimen laboral existentes -->
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="panel panel-default">
+                                                        <!-- /.panel-heading -->
+                                                        <div class="panel-body">
+                                                            <div class="dataTable_wrapper">
+                                                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Regimen </th>
+                                                                            <th>Descripcion</th>
+                                                                            <th>Opciones</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <?php 
+                                                                            require_once('include/funciones.php');
+                                                                            conectar('localhost', 'root', '', 'dbpjudicial');
+
+                                                                            $consulta_mysql='SELECT * From tbregimen order by vcdescripcion;';
+                                                                            $resultado_consulta_mysql=mysql_query($consulta_mysql);
+                                                                            while($registro = mysql_fetch_array($resultado_consulta_mysql)){
+                                                                                echo "
+                                                                                    <tr class='odd gradeX'>
+                                                                                    <td id=''>".$registro["vcdescripcion"]."</td>
+                                                                                    <td id=''>".$registro["vcobservaciones"]."</td>
+                                                                                    <td id='' class='center'>
+                                                                                        <input type='button' value='Editar' class='btn btn-danger btn-xs'>
+                                                                                        <input type='button' value='Exportar' class='btn btn-success btn-xs'>
+                                                                                    </td>
+                                                                                </tr>";
+                                                                            }
+                                                                        ?> 
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
                                                         </div>
+                                                        <!-- /.panel-body -->
                                                     </div>
-                                                    <!-- /.panel-body -->
+                                                    <!-- /.panel -->
                                                 </div>
-                                                <!-- /.panel -->
+                                                <!-- /.col-lg-12 -->
                                             </div>
-                                            <!-- /.col-lg-12 -->
-                                        </div>
+                                            <div class="modal-footer">
+                                                <input value="Guardar" class="btn btn-primary btn-xs" type="submit">
+
+                                                <button type="button" class="btn btn-warning btn-xs">Actualizar</button>
+                                                <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Cerrar</button>
+                                            </div>
+                                        </form>
+                                        <!--***********************************************************************-->
+                                         
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary btn-xs">Guardar</button>
-                                        <button type="button" class="btn btn-warning btn-xs">Actualizar</button>
-                                        <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Cerrar</button>
-                                    </div>
+                                    
                                 </div>
                             </div>
                        </div>
@@ -259,20 +290,31 @@
                                                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                                                 <thead>
                                                                     <tr>
+                                                                        <th>Id</th>
                                                                         <th>Area</th>
-                                                                        <th>Nombre</th>
                                                                         <th>Opciones</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <tr class="odd gradeX">
-                                                                        <td id="">R728</td> <!--nombre-->
-                                                                        <td id="">Comprnde del tipo de contrato xs</td>
-                                                                        <td id="" class="center">
-                                                                            <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                                            <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                                                        </td>
-                                                                    </tr>
+                                                                    <?php 
+                                                                        require_once('include/funciones.php');
+                                                                        conectar('localhost', 'root', '', 'dbpjudicial');
+
+                                                                        $consulta_mysql='SELECT cid,vcnombre From tbarea order by cid;';
+                                                                        $resultado_consulta_mysql=mysql_query($consulta_mysql);
+                                                                        while($registro = mysql_fetch_array($resultado_consulta_mysql)){
+                                                                            echo "
+                                                                                <tr class='odd gradeX'>
+                                                                                    <td id=''>".$registro["cid"]."</td>
+                                                                                    <td id=''>".$registro["vcnombre"]."</td>
+                                                                                    <td id='' class='center'>
+                                                                                        <input type='button' value='Editar' class='btn btn-danger btn-xs'>
+                                                                                        <input type='button' value='Exportar' class='btn btn-success btn-xs'>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            ";
+                                                                        }
+                                                                    ?> 
                                                                 </tbody>
                                                             </table>
                                                         </div>
@@ -312,8 +354,8 @@
                                                 </div>
                                             </div>
                                             <br>
-                                            <div class="form-group"><!--para seguridad-->
-                                                <input type="hidden" id="name_tockenn" value="">
+                                            <div class="form-group"> <!--para seguridad-->
+                                                <input type="hidden" id="name_tocken" value="">
                                             </div>
                                         </form>
                                          <!-- /.tabla regimen laboral existentes -->
@@ -327,19 +369,26 @@
                                                                 <thead>
                                                                     <tr>
                                                                         <th>Periodo</th>
-                                                                        <th>Descripcion</th>
                                                                         <th>Opciones</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <tr class="odd gradeX">
-                                                                        <td id="">R728</td> <!--nombre-->
-                                                                        <td id="">Comprnde del tipo de contrato xs</td>
-                                                                        <td id="" class="center">
-                                                                            <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                                            <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                                                        </td>
-                                                                    </tr>
+                                                                    <?php 
+                                                                        require_once('include/funciones.php');
+                                                                        conectar('localhost', 'root', '', 'dbpjudicial');
+
+                                                                        $consulta_mysql='SELECT * FROM tbperiodo';
+                                                                        $resultado_consulta_mysql=mysql_query($consulta_mysql);
+                                                                        while($registro = mysql_fetch_array($resultado_consulta_mysql)){
+                                                                            echo " <tr class='odd gradeX'>
+                                                                                        <td id=''>".$registro['vcdescripcion']."</td>
+                                                                                        <td id='' class='center'>
+                                                                                            <input type='button' value='Editar' class='btn btn-danger btn-xs'>
+                                                                                            <input type='button' value='Exportar' class='btn btn-success btn-xs'>
+                                                                                        </td>
+                                                                                    </tr>";
+                                                                        }
+                                                                    ?> 
                                                                 </tbody>
                                                             </table>
                                                         </div>
@@ -405,18 +454,29 @@
                                     </div>
                                     <div class="modal-body">
                                         <form>
-                                            <div class="row col-md-12">
+                                            <div class="row">
                                                 <div class="col-md-4" id="">
                                                     Area 
                                                 </div>
-                                               <div class="col-md-8 btn-group"> <a class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown" href="#">Seleciona un Area <span class="caret"></span></a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="#">TI</a></li>
-                                                        <li><a href="#">Seguridad de informacion</a></li>
+                                                <div class='col-md-8 btn-group'> <a class='btn btn-default dropdown-toggle btn-select' data-toggle='dropdown' href='#'>Seleciona un Area <span class='caret'></span></a>
+                                                    <ul class='dropdown-menu'>
+                                                       <?php 
+                                                            require_once('include/funciones.php');
+                                                            conectar('localhost', 'root', '', 'dbpjudicial');
+
+                                                            $consulta_mysql='SELECT cid,vcnombre From tbarea order by vcnombre;';
+                                                            $resultado_consulta_mysql=mysql_query($consulta_mysql);
+                                                            while($registro = mysql_fetch_array($resultado_consulta_mysql)){
+                                                                echo " 
+                                                                    <li><a href='#'>".$registro['vcnombre']."</a></li>
+                                                                    ";
+                                                            }
+                                                        ?>  
                                                     </ul>
-                                               </div>
+                                                </div>
                                             </div>
-                                            <div class="row col-md-12">
+                                            <br>
+                                            <div class="row">
                                                 <div class="col-md-4">
                                                     Observaciones 
                                                 </div>
@@ -474,7 +534,7 @@
                     <!--Tougle RegistroEmpleado-->
                     <button class="btn btn btn-primary btn-sm" data-toggle="modal" data-target="#ModalRegEmpleado">
                       <i class="fa fa-edit "></i>
-                        Registrar Empleado
+                        Registrar Personal
                     </button>
                     <!--fin tabla empleado-->
                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#ModalCRUVacacion"> 
@@ -503,16 +563,31 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="odd gradeX">
-                                            <td id="">Rodrigo Andres Valeunde Tinoco</td> <!--nombre-->
-                                            <td id="">Logistica / 728</td>
-                                            <td id="">12/12/2008</td>
-                                            <td id="" class="center">12/12/2002</td>
-                                            <td id="" class="center">
-                                                <input type="button" value="Editar" class="btn btn-danger btn-xs">
-                                                <input type="button" value="Exportar" class="btn btn-success btn-xs">
-                                            </td>
-                                        </tr>
+                                         <?php 
+                                            require_once('include/funciones.php');
+                                            conectar('localhost', 'root', '', 'dbpjudicial');
+
+                                            $consulta_mysql='SELECT P.vcnombrePersonal,P.vcApPaterno,P.vcApMaterno, A.vcnombre, Reg.vcdescripcion, Cont.dateinicio, Cont.datefin
+                                                            From ((((tbarea A INNER JOIN tbcargo C ON  A.CId = C.CIdArea)
+                                                            INNER JOIN tbpersonal P ON C.cid = P.cidcargo)
+                                                            INNER JOIN tbcontrato Cont ON P.cid = Cont.cidpersonal)
+                                                            INNER JOIN tbperiodo Period ON Cont.cidperiodo = Period.cid)
+                                                            INNER JOIN tbregimen Reg ON Cont.cidregimen = Reg.cid;';
+                                            $resultado_consulta_mysql=mysql_query($consulta_mysql);
+                                            while($registro = mysql_fetch_array($resultado_consulta_mysql)){
+                                                echo " 
+                                                    <tr class='odd gradeX'>
+                                                    <td id=''>".$registro["vcnombrePersonal"]." ".$registro["vcApPaterno"]." ".$registro["vcApMaterno"]."</td>
+                                                    <td id=''>".$registro["vcnombre"]."</td>
+                                                    <td id=''>".$registro["dateinicio"]."</td>
+                                                    <td id='' class='center'>".$registro["datefin"]."</td>
+                                                    <td id='' class='center'>
+                                                        <input type='button' value='Editar' class='btn btn-danger btn-xs'>
+                                                        <input type='button' value='Exportar' class='btn btn-success btn-xs'>
+                                                    </td>
+                                                    </tr>";
+                                            }
+                                        ?> 
                                     </tbody>
                                 </table>
                             </div>

@@ -25,7 +25,7 @@ jQuery.fn.dataTableExt.oApi.fnFakeRowspan = function ( oSettings, iColumn, bCase
 	}
 
 	if (iColumn < 0 || iColumn > oSettings.aoColumns.length-1) {
-		alert ('Invalid column number choosen, must be between 0 and ' + (oSettings.aoColumns.length-1));
+		alert ('Número de columna no válida elegido , debe estar entre 0 y ' + (oSettings.aoColumns.length-1));
 		return false;
 	}
 

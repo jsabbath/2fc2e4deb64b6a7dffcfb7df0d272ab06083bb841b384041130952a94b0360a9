@@ -167,4 +167,10 @@
 	}
 </style>
 
+<?php 
+	public function mysqli_report(flags)($value='')
+	{
+		# c
+	}
+ ?>ode...
 </html>
