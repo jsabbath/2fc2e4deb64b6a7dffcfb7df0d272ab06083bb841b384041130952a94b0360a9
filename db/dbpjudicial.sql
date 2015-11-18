@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Servidor: localhost
--- Tiempo de generación: 14-11-2015 a las 00:01:50
--- Versión del servidor: 5.5.24-log
--- Versión de PHP: 5.4.3
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 18-11-2015 a las 23:52:40
+-- Versión del servidor: 5.6.17
+-- Versión de PHP: 5.5.12
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -178,9 +178,11 @@ CREATE TABLE IF NOT EXISTS `tbarea` (
 --
 
 INSERT INTO `tbarea` (`cid`, `vcnombre`) VALUES
-('', 'Almacen'),
-('0001', 'Sistemas2'),
-('002', 'Almacen');
+('0001', 'Sistemas'),
+('0002', 'Almacen'),
+('0003', 'TI'),
+('0004', 'Recursos Humanos'),
+('005', 'Gestion');
 
 -- --------------------------------------------------------
 
@@ -202,7 +204,9 @@ CREATE TABLE IF NOT EXISTS `tbcargo` (
 
 INSERT INTO `tbcargo` (`cid`, `cidarea`, `vcnombre`) VALUES
 ('0001', '0001', 'Sistemas'),
-('0002', '0001', 'Programador');
+('0002', '0002', 'Programador'),
+('0003', '0003', 'Recursos Humanos'),
+('004', '0003', 'TI');
 
 -- --------------------------------------------------------
 
@@ -284,7 +288,7 @@ INSERT INTO `tbperiodo` (`cid`, `vcdescripcion`) VALUES
 
 CREATE TABLE IF NOT EXISTS `tbpersonal` (
   `cid` char(5) NOT NULL,
-  `vcnombre` varchar(90) NOT NULL,
+  `vcnombrePersonal` varchar(90) NOT NULL,
   `vcApPaterno` varchar(60) NOT NULL,
   `vcApMaterno` varchar(60) NOT NULL,
   `cdni` char(8) NOT NULL,
@@ -297,9 +301,10 @@ CREATE TABLE IF NOT EXISTS `tbpersonal` (
 -- Volcado de datos para la tabla `tbpersonal`
 --
 
-INSERT INTO `tbpersonal` (`cid`, `vcnombre`, `vcApPaterno`, `vcApMaterno`, `cdni`, `cidcargo`) VALUES
-('00001', 'Alan Garcia', '', '', '', '0001'),
-('00002', 'Pedro', 'Pica', 'Piedra', '15641484', '0001');
+INSERT INTO `tbpersonal` (`cid`, `vcnombrePersonal`, `vcApPaterno`, `vcApMaterno`, `cdni`, `cidcargo`) VALUES
+('00001', 'Alan', 'peralta', 'Capcha', '98782738', '0002'),
+('00002', 'Pedro', 'Pica', 'Piedra', '15641484', '0002'),
+('00003', 'Juan Carlos', 'Oblitas', 'Maradona', '98234534', '0002');
 
 -- --------------------------------------------------------
 
@@ -342,9 +347,30 @@ CREATE TABLE IF NOT EXISTS `tbregimen` (
 --
 
 INSERT INTO `tbregimen` (`cid`, `vcdescripcion`, `vcobservaciones`) VALUES
-('00', '1017', ''),
-('01', '1017', ''),
-('02', 'Regimen 01', 'ninguna');
+('00', '1017', 'contrato anual'),
+('01', '1017', 'contrato trimestral'),
+('02', '729', 'ninguna');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbusuario`
+--
+
+CREATE TABLE IF NOT EXISTS `tbusuario` (
+  `cid` char(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `vcusername` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `vcpassword` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL,
+  PRIMARY KEY (`cid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+
+--
+-- Volcado de datos para la tabla `tbusuario`
+--
+
+INSERT INTO `tbusuario` (`cid`, `vcusername`, `vcpassword`) VALUES
+('02', 'junior', 'junior'),
+('04', 'daigo', 'daigo');
 
 --
 -- Restricciones para tablas volcadas
