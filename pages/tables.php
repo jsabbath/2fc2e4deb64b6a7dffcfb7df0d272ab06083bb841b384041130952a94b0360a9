@@ -35,12 +35,12 @@
             <ul class="nav navbar-top-links navbar-right">
                 <!-- /.dropdown -->
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">junior
                         <i class="fa fa-user fa-fw"></i>  
                         <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i>
+                        <li><a href="#"><i class="fa fa-user fa-fw"> </i>
                             <?php 
                             echo $user;
                              ?>
@@ -577,6 +577,7 @@
                                                             INNER JOIN tbperiodo Period ON Cont.cidperiodo = Period.cid)
                                                             INNER JOIN tbregimen Reg ON Cont.cidregimen = Reg.cid;';
                                             $resultado_consulta_mysql=mysql_query($consulta_mysql);
+                                            
                                             while($registro = mysql_fetch_array($resultado_consulta_mysql)){
                                                 echo " 
                                                     <tr class='odd gradeX'>
