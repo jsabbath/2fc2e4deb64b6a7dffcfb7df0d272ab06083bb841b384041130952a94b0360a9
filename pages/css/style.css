@@ -3907,3 +3907,9 @@ fieldset[disabled] .btn-default.active {
 .open .dropdown-toggle.btn-primary {
   background-image: none;
 }
+.mayuscula{
+    text-transform: uppercase;
+}
+.minuscula{
+  text-transform: lowercase;
+}

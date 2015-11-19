@@ -15,3 +15,9 @@ body {
 .theme-showcase .navbar .container {
   width: auto;
 }
+.mayuscula{
+    text-transform: uppercase;
+}
+.minuscula{
+  text-transform: lowercase;
+}

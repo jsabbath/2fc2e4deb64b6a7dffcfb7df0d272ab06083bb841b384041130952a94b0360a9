@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-11-2015 a las 23:52:40
+-- Tiempo de generación: 19-11-2015 a las 09:23:40
 -- Versión del servidor: 5.6.17
 -- Versión de PHP: 5.5.12
 
@@ -302,9 +302,8 @@ CREATE TABLE IF NOT EXISTS `tbpersonal` (
 --
 
 INSERT INTO `tbpersonal` (`cid`, `vcnombrePersonal`, `vcApPaterno`, `vcApMaterno`, `cdni`, `cidcargo`) VALUES
-('00001', 'Alan', 'peralta', 'Capcha', '98782738', '0002'),
-('00002', 'Pedro', 'Pica', 'Piedra', '15641484', '0002'),
-('00003', 'Juan Carlos', 'Oblitas', 'Maradona', '98234534', '0002');
+('00001', 'Alan dotoniel', 'peralta', 'Capcha', '98782738', '0002'),
+('00002', 'Pedro andres alfonzo', 'Pica', 'Piedra', '15641484', '0002');
 
 -- --------------------------------------------------------
 
@@ -361,6 +360,8 @@ CREATE TABLE IF NOT EXISTS `tbusuario` (
   `cid` char(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL,
   `vcusername` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL,
   `vcpassword` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `idpersonal` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_spanish2_ci NOT NULL,
+  `cpoder` char(1) COLLATE utf8_vietnamese_ci NOT NULL,
   PRIMARY KEY (`cid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
@@ -368,9 +369,9 @@ CREATE TABLE IF NOT EXISTS `tbusuario` (
 -- Volcado de datos para la tabla `tbusuario`
 --
 
-INSERT INTO `tbusuario` (`cid`, `vcusername`, `vcpassword`) VALUES
-('02', 'junior', 'junior'),
-('04', 'daigo', 'daigo');
+INSERT INTO `tbusuario` (`cid`, `vcusername`, `vcpassword`, `idpersonal`, `cpoder`) VALUES
+('02', 'junior', 'junior', '00001', '1'),
+('3', '1994', '1994', '00002', '2');
 
 --
 -- Restricciones para tablas volcadas

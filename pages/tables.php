@@ -35,18 +35,19 @@
             <ul class="nav navbar-top-links navbar-right">
                 <!-- /.dropdown -->
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">junior
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-fw"></i>  
                         <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"> </i>
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"> 
                             <?php 
-                            echo $user;
+                                $valor = $_GET['$user'];
+                                echo $valor;
                              ?>
+                        </i>
                         </a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configuracion</a>
                         </li>
                         <li class="divider"></li>
                         <li><a href="login.php"><i class="fa fa-sign-out fa-fw"></i> Cerrar Sesion</a>
@@ -70,11 +71,11 @@
                             </div>
                             <!-- /input-group -->
                         </li>
-                        <li>
+                        <li class="mayuscula">
                             <a href="tables.php"><i class="fa fa-table fa-fw"></i>Lista de Personal</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="mayuscula">
                                 <i class="fa fa-files-o fa-fw"></i> Otras Opciones
                                 <span class="fa arrow"></span>
                             </a>
@@ -98,11 +99,36 @@
                                     <a data-toggle="modal" data-target="#ModalCRUCargo" href="">Cargo / Permiso</a>
                                 </li>
                                 <li>
+                                    <a data-toggle="modal" data-target="#ModalCRUCargo" href="">Cargo / Permiso</a>
+                                </li>
+                                <li role="presentation" class="divider">
+                                    <a href=""></a>
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" data-target="#" href="">Registrar Usuario</a>
+                                </li>
+                                <li>
                                     <a href="login.php">Cerrar Sesion</a>
                                 </li>
-                                
                             </ul>
                             <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="" class="mayuscula"> 
+                                <i class="fa fa-edit fa-fw"></i>Control patrimonial 
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a data-toggle="modal" data-target="#ModalCRUUsuario" href="">Registro de Ingreso</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" data-target="" href="">Asignacion de recursos</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" data-target="" href="">Historial de Recursos</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -170,7 +196,7 @@
                             </div>
                         </div>
                     <!--fin tabla empleado-->
-                    <!--rmodel registrar reglaboral-->
+                    <!--modal registrar reglaboral-->
                         <div class="modal litle" id="ModalCRURegLaboral" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -261,7 +287,7 @@
                             </div>
                        </div>
                     
-                    <!--rmodel Registrar Area-->
+                    <!--modal Registrar Area-->
                         <div class="modal litle" id="ModalCRUArea" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -338,7 +364,7 @@
                             </div>
                        </div>
                        
-                    <!--rmodel registrar periodo-->
+                    <!--modal registrar periodo-->
                         <div class="modal litle" id="ModalCRUPeriodo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -557,7 +583,7 @@
                             <div class="dataTable_wrapper">
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
-                                        <tr>
+                                        <tr class="mayuscula">
                                             <th>Nombres / Apellidos</th>
                                             <th>Area / Regimen Laboral</th>
                                             <th>Fecha Ingreso</th>
@@ -581,15 +607,16 @@
                                             while($registro = mysql_fetch_array($resultado_consulta_mysql)){
                                                 echo " 
                                                     <tr class='odd gradeX'>
-                                                    <td id=''>".$registro["vcnombrePersonal"]." ".$registro["vcApPaterno"]." ".$registro["vcApMaterno"]."</td>
-                                                    <td id=''>".$registro["vcnombre"]."</td>
+                                                    <td class='mayuscula'>".$registro["vcnombrePersonal"]." ".$registro["vcApPaterno"]." ".$registro["vcApMaterno"]."</td>
+                                                    <td class='mayuscula'>".$registro["vcnombre"]." / ".$registro["vcdescripcion"]."</td>
                                                     <td id=''>".$registro["dateinicio"]."</td>
                                                     <td id='' class='center'>".$registro["datefin"]."</td>
                                                     <td id='' class='center'>
-                                                        <input type='button' value='Editar' class='btn btn-danger btn-xs'>
-                                                        <input type='button' value='Exportar' class='btn btn-success btn-xs'>
+                                                        <input type='button' value='Editar' class='btn btn-danger btn-xs mayuscula'>
+                                                        <input type='button' value='Exportar' class='btn btn-success btn-xs mayuscula'>
                                                     </td>
-                                                    </tr>";
+                                                    </tr>
+                                                    ";
                                             }
                                         ?> 
                                     </tbody>
@@ -651,6 +678,12 @@
     <style type="text/css">
         #ModalCRURegLaboral.modal-dialog{
             width: 40% !important;
+        }
+        .mayuscula{
+            text-transform: uppercase;
+        }
+        .minuscula{
+          text-transform: lowercase;
         }
     </style>
 </body>

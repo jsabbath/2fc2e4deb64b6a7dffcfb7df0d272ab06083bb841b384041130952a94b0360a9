@@ -54,7 +54,7 @@
                         <form role="form" action="include/logUser.php" method="POST" data-wow-offset="10" data-wow-delay="0.2s">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Usuario o PIN" name="login_username" type="text" autofocus required>
+                                    <input class="form-control" placeholder="Usuario o PIN" name="login_username" type="password" autofocus required>
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Contraseña" name="login_password" type="password" value="" required>
