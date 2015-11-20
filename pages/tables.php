@@ -206,14 +206,16 @@
                                                 <div class="col-md-6">
                                                     <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese Usuario" required>
                                                 </div>
-                                                <div class='col-md-6'>
-                                                    
+                                            </div>
+                                            <div class="row">
+                                                <div class='col-md-11 alert alert-danger'>
+                                                     <strong>Danger!</strong> datos correctos.
                                                 </div>
                                             </div>
                                             <br>
-                                            <div class='row'>
+                                            <div class='row center-block'>
                                                 <div class="col-md-6">
-                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="password" placeholder="Ingrese contraseña" required>
+                                                    <input class="form-control col-xs-6" id="inputSuccess" type="password" placeholder="Ingrese contraseña" required>
                                                 </div> 
                                                 <div class="col-md-6">
                                                     <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="password" placeholder="Confirmar contraseña" required>
