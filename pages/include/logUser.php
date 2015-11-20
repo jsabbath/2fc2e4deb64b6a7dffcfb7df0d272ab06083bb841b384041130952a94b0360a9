@@ -16,7 +16,7 @@ if($existe = @mysql_fetch_object($query))
 	
 
 	//echo '<script>window="tables.php"</script>'. $user ;
-	header ("Location: /2fc2e4deb64b6a7dffcfb7df0d272ab06083bb841b384041130952a94b0360a9/pages/tables.php").$user;
+	header ("Location: /2fc2e4deb64b6a7dffcfb7df0d272ab06083bb841b384041130952a94b0360a9/pages/tables.php");
 	echo '<div>'.$user.'</div>';
 
 }else {

@@ -28,7 +28,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="">Control Vacacional v0.1</a>
+                <a class="navbar-brand" href="">Control Vacacional v0.15</a>
             </div>
 
             <!-- /.navbar-header -->
@@ -42,6 +42,7 @@
                     <ul class="dropdown-menu dropdown-user">
                         <li>
                             <a href="#"><i class="fa fa-user fa-fw"> 
+                            <!--intento de ubicar nombre en panel principal-->
                             <?php 
                                 $valor = $_GET['$user'];
                                 echo $valor;
@@ -77,7 +78,7 @@
                         <li>
                             <a href="#" class="mayuscula">
                                 <i class="fa fa-files-o fa-fw"></i> Otras Opciones
-                                <span class="fa arrow"></span>
+                                <span class="fa arrow"></span> <!--icono-->
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
@@ -98,9 +99,6 @@
                                 <li>
                                     <a data-toggle="modal" data-target="#ModalCRUCargo" href="">Cargo / Permiso</a>
                                 </li>
-                                <li>
-                                    <a data-toggle="modal" data-target="#ModalCRUCargo" href="">Cargo / Permiso</a>
-                                </li>
                                 <li role="presentation" class="divider">
                                     <a href=""></a>
                                 </li>
@@ -113,7 +111,7 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
-                        <li>
+                        <li class='desable'>
                             <a href="" class="mayuscula"> 
                                 <i class="fa fa-edit fa-fw"></i>Control patrimonial 
                                 <span class="fa arrow"></span>

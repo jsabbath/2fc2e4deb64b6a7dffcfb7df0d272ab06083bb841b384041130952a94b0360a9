@@ -73,56 +73,55 @@
 			</li>
 		</ul>
 	<div class="row">
-
-	<!--tabla detalles-->
-	<div class="col-sm-12 table-responsive">
-		<table aria-describedby="dataTables-example_info" role="grid" class="table table-striped table-bordered dataTable no-footer" id="dataTables-example">
-	        <thead>
-	            <tr role="row">
-	            <th style="width: 50px;" colspan="1" rowspan="1" aria-controls="dataTables-example" tabindex="0">
-	            Periodo
-	            </th>
-	            <th aria-sort="ascending" style="width: 90px;" colspan="1" rowspan="1" aria-controls="dataTables-example" tabindex="0" >
-	            Vacaciones Gozadas</th>
-	            <th aria-label="Fecha Ingreso: activate to sort column ascending" style="width: 72px;" colspan="1" rowspan="1" aria-controls="dataTables-example" tabindex="0">
-	            Cantidad Dias</th>
-	            <th aria-label="Fecha Cese: activate to sort column ascending" style="width: 65px;" colspan="1" rowspan="1" aria-controls="dataTables-example" tabindex="0">
-	            Estado</th>
-	        </thead>
-	        <tbody>
-	            
-	        <tr role="row" class="gradeC odd">
-	                <td class="">Han solo Verger piñas</td>
-	                <td class="sorting_1">Almacen / 1017</td>
-	                <td>09/08/2003</td>
-	                <td class="center">23/08/2002</td>
-	            </tr>
-	            <tr role="row" class="gradeA even">
-	                <td class="">Alan Garcia Solazo</td>
-	                <td class="sorting_1">Almacen / 1017</td>
-	                <td>15/08/1990</td>
-	                <td class="center">23/08/1992</td>
-	            </tr>
-	            <tr role="row" class="gradeA odd">
-	                <td class="">Andrea Lizeth Atuhuaman jurad</td>
-	                <td class="sorting_1">Almacen / 728</td>
-	                <td>09/09/2009</td>
-	                <td class="center">10/10/2015</td>
-	            </tr>
-	            <tr role="row" class="gradeC even">
-	                <td class="">Victor Luck Uzumaki Mazgo</td>
-	                <td class="sorting_1">Logistica / 1017</td>
-	                <td>13/05/2000</td>
-	                <td class="center">12/08/2002</td>
-	            <tr role="row" class="gradeA even">
-	                <td class="">Celene Margit levano soriano</td>
-	                <td class="sorting_1">Marketing / 728</td>
-	                <td>12/03/1994</td>
-	                <td class="center">23/08/2002</td>
-	            </tr>
-	            </tbody>
-	    </table>
-        </div>
+		<!--tabla detalles-->
+		<div class="col-sm-12 table-responsive">
+			<table aria-describedby="dataTables-example_info" role="grid" class="table table-striped table-bordered dataTable no-footer" id="dataTables-example">
+		        <thead>
+		            <tr role="row">
+		            <th style="width: 50px;" colspan="1" rowspan="1" aria-controls="dataTables-example" tabindex="0">
+		            Periodo
+		            </th>
+		            <th aria-sort="ascending" style="width: 90px;" colspan="1" rowspan="1" aria-controls="dataTables-example" tabindex="0" >
+		            Vacaciones Gozadas</th>
+		            <th aria-label="Fecha Ingreso: activate to sort column ascending" style="width: 72px;" colspan="1" rowspan="1" aria-controls="dataTables-example" tabindex="0">
+		            Cantidad Dias</th>
+		            <th aria-label="Fecha Cese: activate to sort column ascending" style="width: 65px;" colspan="1" rowspan="1" aria-controls="dataTables-example" tabindex="0">
+		            Estado</th>
+		        </thead>
+		        <tbody>
+		            
+		        <tr role="row" class="gradeC odd">
+		                <td class="">Han solo Verger piñas</td>
+		                <td class="sorting_1">Almacen / 1017</td>
+		                <td>09/08/2003</td>
+		                <td class="center">23/08/2002</td>
+		            </tr>
+		            <tr role="row" class="gradeA even">
+		                <td class="">Alan Garcia Solazo</td>
+		                <td class="sorting_1">Almacen / 1017</td>
+		                <td>15/08/1990</td>
+		                <td class="center">23/08/1992</td>
+		            </tr>
+		            <tr role="row" class="gradeA odd">
+		                <td class="">Andrea Lizeth Atuhuaman jurad</td>
+		                <td class="sorting_1">Almacen / 728</td>
+		                <td>09/09/2009</td>
+		                <td class="center">10/10/2015</td>
+		            </tr>
+		            <tr role="row" class="gradeC even">
+		                <td class="">Victor Luck Uzumaki Mazgo</td>
+		                <td class="sorting_1">Logistica / 1017</td>
+		                <td>13/05/2000</td>
+		                <td class="center">12/08/2002</td>
+		            <tr role="row" class="gradeA even">
+		                <td class="">Celene Margit levano soriano</td>
+		                <td class="sorting_1">Marketing / 728</td>
+		                <td>12/03/1994</td>
+		                <td class="center">23/08/2002</td>
+		            </tr>
+		            </tbody>
+		    </table>
+	        </div>
 	</div>
 	</div>
 </body>
@@ -164,6 +163,9 @@
 	}
 	table{
 		width: 500px;
+	}
+	.row{
+		margin-bottom: 40px:;
 	}
 </style>
 
