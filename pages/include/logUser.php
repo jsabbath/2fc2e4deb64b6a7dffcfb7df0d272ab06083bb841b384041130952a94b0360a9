@@ -11,21 +11,10 @@ if($existe = @mysql_fetch_object($query))
 {
 	$_SESSION['logged'] = 'yes';
 	$_SESSION['login_username'] = $user;
-	//echo '<script>window.location="principal.php"</script>';
-	//echo "<div>user correcto</div>";
-	
-
-	//echo '<script>window="tables.php"</script>'. $user ;
 	header ("Location: .././tables.php");
 	echo '<div>'.$user.'</div>';
 
 }else {
-		
 		header ("Location: .././login.php");
-
-		//echo $mensaje = 'El usuario no existe';		
-		//echo "<div>user incorrecto</div>";
-		//echo '<div>El usuario y/o password son incorrectos</div>';
-        // echo "<script type=\"No existe el usuario/javascript\">alert(\"Fotos guardadas\");</script>";
 	}
 ?>

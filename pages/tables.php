@@ -195,21 +195,20 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                        <h4 class="modal-title" id="myModalLabel">Registrar usuario</h4>
+                                        <h4 class="modal-title" id="myModalLabel">Registrar Usuario</h4>
                                     </div>
                                     <div class="modal-body">
                                         <form role="form" id="regPersonalForm">
                                         <div class="form-group">
                                             <label class="control-label" for="inputSuccess">Datos de Usuario</label>
-                                            <br>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese Usuario" required>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class=' col-md-11 alert alert-danger'>
-                                                     <strong>Danger!</strong> datos correctos.
+                                            <div class="hidden row center-block">
+                                                <div class='col-md-12 alert alert-danger'>
+                                                     <strong>Peligro!</strong> datos errados.
                                                 </div>
                                             </div>
                                             <br>
@@ -221,10 +220,9 @@
                                                     <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="password" placeholder="Confirmar contraseña" required>
                                                 </div>
                                             </div>
-                                            
                                             <br>
                                             <label class="control-label" for="inputSuccess">Datos Personales</label>
-                                            <br>
+                                            <br><!--salto de lina-->
                                             <div class='row'>
                                                 <div class="col-md-6">
                                                     <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="password" placeholder="Ingrese DNI" required>
@@ -388,7 +386,7 @@
                                                                                     <td id=''>".$registro["vcnombre"]."</td>
                                                                                     <td id='' class='center'>
                                                                                         <input type='button' value='Editar' class='btn btn-danger btn-xs'>
-                                                                                        <input type='button' value='Exportar' class='btn btn-success btn-xs'>
+                                                                                        <input type='button' value='Deshabilitar' class='btn btn-success btn-xs'>
                                                                                     </td>
                                                                                 </tr>
                                                                             ";
@@ -722,6 +720,18 @@
             	alert($('.btn-select').text()+", "+$('.btn-select2').text());
             });
         });
+
+            //limpiando modal RegLaboral
+            $('#ModalCRURegLaboral').on('hidden.bs.modal', function(){ 
+                $(this).find('form')[0].reset(); //para borrar todos los datos que tenga los input, textareas, select.
+                $("label.error").remove();  //lo utilice para borrar la etiqueta de error del jquery validate
+            });
+             //limpiando modal RegLaboral
+            $('#ModalCRURegLaboral').on('hidden.bs.modal', function(){ 
+                $(this).find('form')[0].reset(); //para borrar todos los datos que tenga los input, textareas, select.
+                $("label.error").remove();  //lo utilice para borrar la etiqueta de error del jquery validate
+            });
+
     </script>
 
     <style type="text/css">
