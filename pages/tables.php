@@ -208,12 +208,12 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class='col-md-11 alert alert-danger'>
+                                                <div class=' col-md-11 alert alert-danger'>
                                                      <strong>Danger!</strong> datos correctos.
                                                 </div>
                                             </div>
                                             <br>
-                                            <div class='row center-block'>
+                                            <div class='row'>
                                                 <div class="col-md-6">
                                                     <input class="form-control col-xs-6" id="inputSuccess" type="password" placeholder="Ingrese contraseña" required>
                                                 </div> 
