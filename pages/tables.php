@@ -146,32 +146,32 @@
                                         <h4 class="modal-title" id="myModalLabel">Personal Laboral</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <form role="form" >
+                                        <form role="form" ID="regPersonalForm" action="controllers/tbPersonal/pRegistrar.php">
                                         <div class="form-group">
                                             <label class="control-label" for="inputSuccess">Nombres y Apellidos</label>
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <input class="form-control col-xs-3 col-sm-3" id="inputSuccess" type="text" placeholder="Nombres Completos" required>    
+                                                    <input class="form-control col-xs-3 col-sm-3" id="inputSuccess" type="text" id="fullFirstName" placeholder="Nombres Completos" required>    
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Apellido Paterno" required>
+                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" id="lastName1" placeholder="Apellido Paterno" required>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Apellido Materno" required>
+                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text"id="lastName2" placeholder="Apellido Materno" required>
                                                 </div> 
                                             </div>
                                             <br>
                                             <div class="row">
                                                 <div class="form-group col-md-6">
                                                     <label class="control-label" for="inputError">Escalofon</label>
-                                                    <input class="form-control" id="inputError" type="text" placeholder='Ingrese escalofon' requires>
+                                                    <input class="form-control" id="inputError" type="text" id="scalafon" placeholder='Ingrese escalofon' requires>
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label class="control-label" for="inputError">DNI</label>
-                                                    <input class="form-control" id="inputError" type="text" placeholder="ingrese DNI" required>
+                                                    <input class="form-control" id="inputError" type="text" id="dni" placeholder="ingrese DNI" required>
                                                 </div>
                                             </div>                                        <div class="form-group"><!--para seguridad-->
                                             <input type="hidden" id="name_tockenn" value="">
@@ -181,7 +181,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                        <button type="button" class="btn btn-primary">Guardar</button>
+                                        <button type="button" class="btn btn-primary"  id="btnRegPersonal" >Guardar</button>
                                     </div>
                                 </div>
                             </div>
@@ -198,7 +198,7 @@
                                         <h4 class="modal-title" id="myModalLabel">Registrar Usuario</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <form role="form" id="regPersonalForm">
+                                        <form role="form" >
                                         <div class="form-group">
                                             <label class="control-label" for="inputSuccess">Datos de Usuario</label>
                                             <div class="row">
@@ -237,7 +237,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                        <button type="button" class="btn btn-primary" id="btnRegPersonal">Guardar</button>
+                                        <button type="button" class="btn btn-primary">Guardar</button>
                                     </div>
                                 </div>
                             </div>
@@ -703,7 +703,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
-    <script src="./js/clientpost.js"></script>
+    <script src="./js/clientPosts.js"></script>
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
         $(document).ready(function() {

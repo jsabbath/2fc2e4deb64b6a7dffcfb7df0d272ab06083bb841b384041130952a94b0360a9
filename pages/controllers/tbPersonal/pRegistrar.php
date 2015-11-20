@@ -1,79 +1,41 @@
-<?php
-include('mysql_conexion.php');
-if(isset($_POST))
-{
-	$nombres=$_POST["nombres"];
-	$apellidos=$_POST["apellidos"];
-	$email=$_POST["email"];
-	$user=$_POST["user"];
-	$pass=$_POST["pass"];
+<?php      
 
-	if($nombres==NULL || $nombres=="")
-	{
-		echo "<p class='text-danger'>Ingresar Nombre</p>";
-	}
-	elseif($apellidos==NULL || $apellidos=="")
-	{
-		echo "<p class='text-danger'>Ingresar Apellido</p>";
-	}
-	elseif($email==NULL || $email=="")
-	{
-		echo "<p class='text-danger'>Ingresar Email</p>";
-	}
-	elseif($user==NULL || $user=="")
-	{
-		echo "<p class='text-danger'>Ingresar Usuario</p>";
-	}
-	elseif($pass==NULL || $pass=="")
-	{
-		echo "<p class='text-danger'>Ingresar Contraseña</p>";
-	}
-	elseif(UserAlreadyExists($user, $ldapLink))
+    include('../../include/config.php');
+    if(isset($_POST))
     {
-        echo "<p class='text-danger'>El usuario ya existe.</p>";
-    }
-	else
-	{
-	$password = hash ( "sha256" , $pass, false );
-            
-    $info["cn"] = $user;
-        $info["givenname"] = $nombres;
-        $info["sn"] = $apellidos;
-        //$info["dn"] = "cn=dfernandez,ou=usuarios,dc=ldap,dc=digitalsoft,dc=tk";
-        //$info["objectClass"][0] = "top";
-        //$info["objectClass"][1] = "person";
-        $info["objectClass"][0] = "inetOrgPerson";
-        $info["objectClass"][1] = "posixAccount";
-        //$info["objectClass"][2] = "shadowAccount";
-        //$info["ou"] = "usuarios";
-        $info["uid"] = $user;
-        $info["uidNumber"] = "5004";
-        $info["gidNumber"] = "10001";
-        $info["userPassword"] = $password;
-        //$info["loginShell"] = "/bin/bash";
-        $info["homeDirectory"] = "./home/nfs/$user";
-        $info["mail"] = $email;
-    
-    // ƒf[ƒ^‚ðƒfƒBƒŒƒNƒgƒŠ‚É’Ç‰Á
-    if (ldap_add($ldapLink, "cn=$user,ou=usuarios,dc=ldap,dc=digitalsoft,dc=tk", $info))
-        {
-            // Todo: Security
-            RegisterPasswordSecurity($user, $password);
-                
-            $current_user = $_SESSION['current_user_cn'];
-            RegisterAuditoriaTransaccion($current_user,"Usuarios","user_cn_id","I","-",$user);
-            
-            echo "<p class='text-info'>Usuario registrado con exito.</p>";
-            
-            /*echo 
-    			'<script language="JavaScript" type="text/javascript">
-    				window.location="personal.php";
-    			</script>';*/
-        }
+    	$nombres=$_POST["fullFirstName"];
+    	$apellido1=$_POST["lastName1"];
+        $apellido2=$_POST["lastName2"];
+    	$scalafon=$_POST["scalafon"];
+    	$dni=$_POST["dni"];
+        $codigopersonal="00002";
+    	
+
+    	if($nombres==NULL || $nombres=="")
+    	{
+    		echo "<p class='text-danger'>Ingresar Nombres</p>";
+    	}
+    	elseif($apellido1==NULL || $apellido1=="")
+    	{
+    		echo "<p class='text-danger'>Ingresar Primer Apellido</p>";
+    	}
+    	elseif($apellido2==NULL || $apellido2=="")
+    	{
+    		echo "<p class='text-danger'>Ingresar Segundo Apellido</p>";
+    	}
+    	elseif($scalafon==NULL || $scalafon=="")
+    	{
+    		echo "<p class='text-danger'>Ingresar ESCALAFON</p>";
+    	}
+    	elseif($dni==NULL || $dni=="")
+    	{
+    		echo "<p class='text-danger'>Ingresar DNI</p>";
+    	}
         else
         {
-            echo "<p class='text-danger'>Error en la conexion.</p>";
-        }
+            $conn = new mysqli($HOST, $USER, $PASSWORD, $DB);
+
+        mysqli_query(conn,'Call InsertarPersonal("'.$codigopersonal.'","'.$nombres.'","'.$nombres.'","'$apellido1'","'.$apellido2.'","'.$scalafon.'","'.$dni.'")' ;);
+        } 
     }
-}
 ?>
