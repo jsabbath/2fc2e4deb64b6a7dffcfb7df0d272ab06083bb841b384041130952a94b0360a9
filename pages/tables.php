@@ -200,27 +200,36 @@
                                     <div class="modal-body">
                                         <form role="form" id="regPersonalForm">
                                         <div class="form-group">
-                                            <label class="control-label" for="inputSuccess">Username</label>
+                                            <label class="control-label" for="inputSuccess">Datos de Usuario</label>
                                             <br>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese Usuario" required>
                                                 </div>
+                                                <div class='col-md-6'>
+                                                    
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class='row'>
                                                 <div class="col-md-6">
-                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese contraseña" required>
+                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="password" placeholder="Ingrese contraseña" required>
+                                                </div> 
+                                                <div class="col-md-6">
+                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="password" placeholder="Confirmar contraseña" required>
+                                                </div>
+                                            </div>
+                                            
+                                            <br>
+                                            <label class="control-label" for="inputSuccess">Datos Personales</label>
+                                            <br>
+                                            <div class='row'>
+                                                <div class="col-md-6">
+                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="password" placeholder="Ingrese DNI" required>
                                                 </div> 
                                             </div>
                                             <br>
-                                            <div class="row">
-                                                <div class="form-group col-md-6">
-                                                    <label class="control-label" for="inputError">Escalofon</label>
-                                                    <input class="form-control" id="inputError" type="text" placeholder='Ingrese escalofon' requires>
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <label class="control-label" for="inputError">DNI</label>
-                                                    <input class="form-control" id="inputError" type="text" placeholder="ingrese DNI" required>
-                                                </div>
-                                            </div>                                        <div class="form-group"><!--para seguridad-->
+                                            <div class="form-group"><!--para seguridad-->
                                             <input type="hidden" id="name_tockenn" value="">
                                         </div>
                                         </div>
