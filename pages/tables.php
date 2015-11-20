@@ -542,7 +542,6 @@
                                                             </table>
                                                         </div>
                                                     </div>
-                                                    <!-- /.panel-body -->
                                                 </div>
                                                 <!-- /.panel -->
                                             </div>
