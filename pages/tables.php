@@ -33,28 +33,24 @@
 
             <!-- /.navbar-header -->
             <ul class="nav navbar-top-links navbar-right">
-                <!-- /.dropdown -->
+                <!-- /.dropdown -->   
+                Bienvenido:
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  
+                          
+                        <i class="fa fa-user fa-fw"></i>
+                        <!--intento de ubicar nombre en panel principal-->
+                        <?php 
+                            session_start();
+                            echo $_SESSION['login_username'];
+                            echo " ";
+                        ?>  
                         <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li>
-                            <a href="#"><i class="fa fa-user fa-fw"> 
-                            <!--intento de ubicar nombre en panel principal-->
-                            <?php 
-                                $valor = $_GET['$user'];
-                                echo $valor;
-                             ?>
-                        </i>
                         </a>
                         </li>
-                        <li class="divider"></li>
                         <li><a href="login.php"><i class="fa fa-sign-out fa-fw"></i> Cerrar Sesion</a>
-                        <?php 
-                           require_once('include/sesion_start.php'); //invoca
-                         ?>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -99,11 +95,8 @@
                                 <li>
                                     <a data-toggle="modal" data-target="#ModalCRUCargo" href="">Cargo / Permiso</a>
                                 </li>
-                                <li role="presentation" class="divider">
-                                    <a href=""></a>
-                                </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="#" href="">Registrar Usuario</a>
+                                    <a data-toggle="modal" data-target="#ModalRegUsuario" href="">Registrar Usuario</a>
                                 </li>
                                 <li>
                                     <a href="login.php">Cerrar Sesion</a>
@@ -194,6 +187,54 @@
                             </div>
                         </div>
                     <!--fin tabla empleado-->
+                    
+                    <!--registrar usuario modal-->
+                    <!--rmodel registrar empleado-->
+                        <div class="modal fade" id="ModalRegUsuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title" id="myModalLabel">Registrar usuario</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form role="form">
+                                        <div class="form-group">
+                                            <label class="control-label" for="inputSuccess">Username</label>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese Usuario" required>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input class="form-control col-xs-6 col-sm-3" id="inputSuccess" type="text" placeholder="Ingrese contraseña" required>
+                                                </div> 
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="form-group col-md-6">
+                                                    <label class="control-label" for="inputError">Escalofon</label>
+                                                    <input class="form-control" id="inputError" type="text" placeholder='Ingrese escalofon' requires>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label class="control-label" for="inputError">DNI</label>
+                                                    <input class="form-control" id="inputError" type="text" placeholder="ingrese DNI" required>
+                                                </div>
+                                            </div>                                        <div class="form-group"><!--para seguridad-->
+                                            <input type="hidden" id="name_tockenn" value="">
+                                        </div>
+                                        </div>
+                                    </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--fin modal reg empleado-->
+
                     <!--modal registrar reglaboral-->
                         <div class="modal litle" id="ModalCRURegLaboral" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
