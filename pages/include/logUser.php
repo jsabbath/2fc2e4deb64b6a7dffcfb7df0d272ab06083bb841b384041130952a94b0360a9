@@ -21,8 +21,8 @@ if($existe = @mysql_fetch_object($query))
 
 }else {
 		
-		header ("Location: /2fc2e4deb64b6a7dffcfb7df0d272ab06083bb841b384041130952a94b0360a9/pages/login.php");
-		
+		header ("Location: .././login.php");
+
 		//echo $mensaje = 'El usuario no existe';		
 		//echo "<div>user incorrecto</div>";
 		//echo '<div>El usuario y/o password son incorrectos</div>';
