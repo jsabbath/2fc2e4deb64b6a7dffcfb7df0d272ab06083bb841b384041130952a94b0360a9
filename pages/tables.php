@@ -146,7 +146,7 @@
                                         <h4 class="modal-title" id="myModalLabel">Personal Laboral</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <form role="form">
+                                        <form role="form" >
                                         <div class="form-group">
                                             <label class="control-label" for="inputSuccess">Nombres y Apellidos</label>
                                             <div class="row">
@@ -198,7 +198,7 @@
                                         <h4 class="modal-title" id="myModalLabel">Registrar usuario</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <form role="form">
+                                        <form role="form" id="regPersonalForm">
                                         <div class="form-group">
                                             <label class="control-label" for="inputSuccess">Username</label>
                                             <br>
@@ -228,7 +228,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                        <button type="button" class="btn btn-primary">Guardar</button>
+                                        <button type="button" class="btn btn-primary" id="btnRegPersonal">Guardar</button>
                                     </div>
                                 </div>
                             </div>
@@ -694,7 +694,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
-
+    <script src="./js/clientpost.js"></script>
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
         $(document).ready(function() {
