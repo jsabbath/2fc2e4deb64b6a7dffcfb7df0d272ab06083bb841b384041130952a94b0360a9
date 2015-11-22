@@ -136,7 +136,8 @@
                 <!-- /.col-lg-12 -->
             </div>
             <div class="row">
-                <div class="col-lg-12 ">                    
+                <div class="col-lg-12 ">     
+
                     <!--rmodel registrar empleado-->
                         <div class="modal fade" id="ModalRegEmpleado" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -230,14 +231,14 @@
                                             </div>
                                             <br>
                                             <div class="form-group"><!--para seguridad-->
-                                            <input type="hidden" id="name_tockenn" value="">
-                                        </div>
+                                                <input type="hidden" id="name_tockenn" value="">
+                                            </div>
                                         </div>
                                     </form>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                        <button type="button" class="btn btn-primary" id="btnRegPersonal">Guardar</button>
+                                         <button type="button" class="btn btn-primary" id="btnRegPersonal">Guardar</button>
+                                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                                     </div>
                                 </div>
                             </div>
@@ -726,8 +727,28 @@
                 $(this).find('form')[0].reset(); //para borrar todos los datos que tenga los input, textareas, select.
                 $("label.error").remove();  //lo utilice para borrar la etiqueta de error del jquery validate
             });
-             //limpiando modal RegLaboral
+            //limpiando modal RegLaboral
             $('#ModalCRURegLaboral').on('hidden.bs.modal', function(){ 
+                $(this).find('form')[0].reset(); //para borrar todos los datos que tenga los input, textareas, select.
+                $("label.error").remove();  //lo utilice para borrar la etiqueta de error del jquery validate
+            });
+            //limpiando modal ModalRegEmpleado
+            $('#ModalRegEmpleado').on('hidden.bs.modal', function(){ 
+                $(this).find('form')[0].reset(); //para borrar todos los datos que tenga los input, textareas, select.
+                $("label.error").remove();  //lo utilice para borrar la etiqueta de error del jquery validate
+            });
+            //limpiando modal ModalCRUArea
+            $('#ModalCRUArea').on('hidden.bs.modal', function(){ 
+                $(this).find('form')[0].reset(); //para borrar todos los datos que tenga los input, textareas, select.
+                $("label.error").remove();  //lo utilice para borrar la etiqueta de error del jquery validate
+            });
+            //limpiando modal ModalCRUPeriodo
+            $('#ModalCRUPeriodo').on('hidden.bs.modal', function(){ 
+                $(this).find('form')[0].reset(); //para borrar todos los datos que tenga los input, textareas, select.
+                $("label.error").remove();  //lo utilice para borrar la etiqueta de error del jquery validate
+            });
+            //limpiando modal ModalCRUPeriodo
+            $('#ModalCRUCargo').on('hidden.bs.modal', function(){ 
                 $(this).find('form')[0].reset(); //para borrar todos los datos que tenga los input, textareas, select.
                 $("label.error").remove();  //lo utilice para borrar la etiqueta de error del jquery validate
             });
