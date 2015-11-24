@@ -7,7 +7,7 @@
         <div>
             <div>
                 <div>
-                    <form>
+                    <form action="include/regCRUArea.php" method="POST">
                         <div>
                             <h4>Area</h4>
                         </div>
@@ -54,7 +54,7 @@
                                                                     <input type='button' value='Deshabilitar' class='btn btn-success btn-xs'>
                                                                 </td>
                                                             </tr>
-                                                        ";
+                                                            ";
                                                     }
                                                 ?> 
                                             </tbody>

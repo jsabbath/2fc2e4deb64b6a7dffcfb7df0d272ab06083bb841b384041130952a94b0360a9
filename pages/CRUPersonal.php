@@ -117,8 +117,8 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="form-group"><!--para seguridad-->
+                        <div class="form-group">
+                            <!--para seguridad-->
                             <input type="hidden" id="name_tockenn" value="">
                         </div>
                     </div>
