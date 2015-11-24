@@ -76,11 +76,11 @@
 	                    </div>
 	                    <!-- /.col-lg-12 -->
 	                </div>
-	                <div claas='row pull-right'>
-	                    <div class="col-md-1"><input  class="btn btn-success btn-xs" type = "submit" value="Registrar"></div>
-	                    <div class="col-md-1"><input  class ='btn btn-primary btn-xs' type='button' value='Actualizar'></div>
-						<div class="col-md-1"><input  class="btn btn-warning btn-xs" type = "reset" value="Limpiar"></div>
-						<div class="col-md-1"><input  class ='btn btn-danger btn-xs' type='button' value='Salir'></div>
+	                <div claas='row col-md-6'>
+	                	<input  class="btn btn-success" type = "submit" value="Registrar">
+	                    <input  class ='btn btn-primary' type='button' value='Actualizar'>
+						<input  class="btn btn-warning" type = "reset" value="Limpiar">
+						<input  class ='btn btn-danger' type='button' value='Salir'>
 	                </div>
 	            <!--***********************************************************************-->
 	        </div>
