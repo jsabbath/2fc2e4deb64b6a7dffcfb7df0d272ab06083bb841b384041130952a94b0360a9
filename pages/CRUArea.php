@@ -8,6 +8,7 @@
             <div>
                 <div>
                     <form action="include/regCRUArea.php" method="POST">
+                        
                         <div>
                             <h4>Area</h4>
                         </div>
@@ -16,12 +17,12 @@
                                 Nombre 
                             </div>
                             <div class="col-md-4">
-                                <input type="text" class="form-control" placeholder="Ingrese Nombre del Area" id="#vcnombre" required>
+                                <input type="text" class="form-control" placeholder="Ingrese Nombre del Area" name="vcnombre" required>
                             </div>
                         </div>
                         <br>
-                        <div class="form-group"><!--para seguridad-->
-                            <input type="hidden" id="name_tockenn" value="">
+                        <div class="form-group" type="hidden">
+                        hola
                         </div>
                         <div class="row">
                         <div class="col-lg-12">
