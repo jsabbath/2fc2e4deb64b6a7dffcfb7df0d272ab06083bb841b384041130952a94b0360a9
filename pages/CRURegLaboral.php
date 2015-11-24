@@ -15,7 +15,7 @@
 	                        Nuevo Regimen 
 	                    </div>
 	                    <div class="col-md-4 center-block ">
-	                        <input class="form-control" type="text" placeholder="Ingrese denominacion" id="" name='vcdescripcion' required>
+	                        <input class="form-control" type="text" placeholder="Ingrese denominacion" id="" name="vcdescripcion" required>
 	                    </div>
 	                </div>
 
@@ -25,7 +25,7 @@
 	                        Descripcion 
 	                    </div>
 	                    <div class="col-md-4 center-block ">
-	                        <input type="text" class="form-control" placeholder="Ingrese observaciones" id="" name='vcobservaciones' required>
+	                        <input type="text" class="form-control" placeholder="Ingrese observaciones" id="" name="vcobservaciones" required>
 	                    </div>
 	                </div>
 	                <div class="form-group">
