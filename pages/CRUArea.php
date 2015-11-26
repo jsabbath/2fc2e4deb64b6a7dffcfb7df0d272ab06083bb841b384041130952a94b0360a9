@@ -73,7 +73,6 @@
                             <input type='button' class="btn btn-warning" value="Actualizar">
                             <input type='reset' class="btn btn-success" value="Nuevo">
                             <a class="btn btn-primary" value="cerrar" href='tables.php'>Salir</a>
-                            
                         </div>
                     </form>
                      <!-- /.tabla regimen laboral existentes -->

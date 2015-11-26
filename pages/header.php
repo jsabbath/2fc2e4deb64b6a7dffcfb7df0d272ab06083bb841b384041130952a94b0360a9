@@ -90,10 +90,10 @@
                                     <a href="CRUArea.php">Area / Permiso</a>
                                 </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="#ModalCRUPeriodo" href="">Periodo / Permiso</a>
+                                    <a href="CRUPeriodo.php">Periodo / Permiso</a>
                                 </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="#ModalCRUCargo" href="">Cargo / Permiso</a>
+                                    <a href="CRUCargo.php">Cargo / Permiso</a>
                                 </li>
                                 <li>
                                     <a href="regUser.php">Registrar Usuario</a>
@@ -111,13 +111,13 @@
                             </a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a data-toggle="modal" data-target="#ModalCRUUsuario" href="">Registro de Ingreso</a>
+                                    <a href="">Registro de Ingreso</a>
                                 </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="" href="">Asignacion de recursos</a>
+                                    <a href="">Asignacion de recursos</a>
                                 </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="" href="">Historial de Recursos</a>
+                                    <a href="">Historial de Recursos</a>
                                 </li>
                             </ul>
                         </li>
@@ -132,3 +132,9 @@
             
             <div class="row">
                 <div class="col-lg-12 ">     
+
+<style type="text/css">
+    .dataTable_wrapper{
+        -webkit-transition: 0.9s;
+    }
+</style>

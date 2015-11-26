@@ -3,14 +3,13 @@
 	conectar('localhost','root','','dbpjudicial');
 
 	$vcnombre = strip_tags($_POST['vcnombre']); //varibless
-	$cid = @mysql_query('SELECT COUNT (*) from tbarea;')+1;
 
 	$query = @mysql_query('SELECT * FROM tbarea WHERE vcnombre="'.mysql_real_escape_string($vcnombre).'"');
 		if ($existe = @mysql_fetch_object($query))
 			{
 				echo "El registro ya existe";
 			}else{
-				$meter = @mysql_query('INSERT INTO tbarea (cid, vcnombre) values ("'.$cid.'","'.mysql_real_escape_string($vcnombre).'");');
+				$meter = @mysql_query('INSERT INTO tbarea (cid, vcnombre) values ("","'.mysql_real_escape_string($vcnombre).'");');
 				if($meter)
 					{
 						

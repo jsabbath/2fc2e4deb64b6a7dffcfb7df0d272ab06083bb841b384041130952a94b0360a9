@@ -78,7 +78,6 @@
 	                </div>
 	                <div claas='row col-md-6'>
 	                	<input  class="btn btn-success" type = "submit" value="Registrar">
-	                    <input  class ='btn btn-primary' type='button' value='Actualizar'>
 						<input  class="btn btn-warning" type = "reset" value="Limpiar">
 						<input  class ='btn btn-danger' type='button' value='Salir'>
 	                </div>

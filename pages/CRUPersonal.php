@@ -127,7 +127,7 @@
                 <div>
                     <input class="btn btn-primary" type="reset" value="Nuevo">
                     <button type="button" class="btn btn-primary"  id="btnRegPersonal" >Guardar</button>
-                    <button type="button" class="btn btn-default" >Cerrar</button>
+                            <a class="btn btn-primary" value="cerrar" href='tables.php'>Salir</a>
                 </div>
             </div>
         </div>
