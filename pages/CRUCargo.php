@@ -13,11 +13,12 @@
                         <div class="col-md-4" id="">
                             Area 
                         </div>
-                        <div class='col-md-8 btn-group' name = 'cidArea'> 
-                        <a class='btn btn-default dropdown-toggle btn-select' data-toggle='dropdown' href='#'>
+                        <div class='col-md-8 btn-group'> 
+                        <!--a class='btn btn-default dropdown-toggle btn-select' data-toggle='dropdown' href='#'>
                             Selecciona un Area <span class='caret'></span>
-                        </a>
-                            <ul class='dropdown-menu'>
+                        </a-->
+                            <!--ul class='dropdown-menu' name = 'cidArea'-->
+                            <select name="cidArea">
                                <?php 
                                     require_once('include/funciones.php');
                                     conectar('localhost', 'root', '', 'dbpjudicial');
@@ -25,8 +26,11 @@
                                     $consulta_mysql='SELECT cid,vcnombreArea From tbarea order by cid;';
                                     $resultado_consulta_mysql=mysql_query($consulta_mysql);
                                     while($registro = mysql_fetch_array($resultado_consulta_mysql)){
+                                        //<li><a href='#' value='".$registro['cid']."'>".$registro['vcnombreArea']."</a></li>";
                                         echo " 
-                                            <li><a href='#' value='".$registro['cid']."'>".$registro['vcnombreArea']."</a></li>";
+                                            <option value='".$registro['cid']."'>".$registro['vcnombreArea']."</option>
+                                        ";
+                                            
                                     }
                                 ?>  
                             </ul>
@@ -90,10 +94,10 @@
 	                    <!-- /.col-lg-12 -->
 	                </div>
 	                <div>
-	                	<input type="submit" value="Guardar" class="">
+	                	<input type="submit" value="Guardar" class="btn btn-primary">
 	                	<input type='reset' value="Limpiar">
 	                	<input type="button" class="btn btn-warning" value='Actualizar'>
-		                <a class="btn btn-primary" value="cerrar" href='tables.php'>Salir</a>
+		                <a class="btn btn-danger" value="cerrar" href='tables.php'>Salir</a>
 		            </div>
                 </form>
             </div>
