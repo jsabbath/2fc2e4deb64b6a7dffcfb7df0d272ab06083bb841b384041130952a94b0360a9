@@ -1,5 +1,6 @@
 <?php include('header.php'); ?>    
-<?php include('modals.php'); ?>       
+<?php include('modals.php'); ?>    
+<?php include('include/config.php'); ?>   
 <!--rmodel registrar empleado-->
     <div>
         <div>
@@ -45,12 +46,17 @@
                                     </a>
                                     <ul class='dropdown-menu'>
                                         <?php 
-                                            require_once('include/funciones.php');
-                                            conectar('localhost', 'root', '', 'dbpjudicial');
+                                           // require_once('include/funciones.php');
+                                            //conectar('localhost', 'root', '', 'dbpjudicial');
 
-                                            $consulta_mysql='SELECT vcdescripcion From tbregimen;';
-                                            $resultado_consulta_mysql=mysql_query($consulta_mysql);
-                                            while($registro = mysql_fetch_array($resultado_consulta_mysql)){
+                                            //$consulta_mysql='SELECT vcdescripcion From tbregimen;';
+
+                                            $conn = new mysqli(HOST, USER, PASSWORD, DB);
+                                            
+                                            $resultado_consulta_mysql=mysqli_query($conn,"Call Mostrarregimen()"); 
+
+                                            while($registro = mysqli_fetch_array($resultado_consulta_mysql))
+                                            {
                                                 echo " <li><a value='".$registro['cid']."'>".$registro['vcdescripcion']."</a></li>";
                                             }
                                         ?>  
@@ -76,29 +82,42 @@
                                         <?php 
                                             function show_Area()
                                             {
-                                                require_once('include/funciones.php');
-                                                conectar('localhost', 'root', '', 'dbpjudicial');
+                                                //require_once('include/funciones.php');
+                                               // conectar('localhost', 'root', '', 'dbpjudicial');
 
-                                                $consulta_mysql='SELECT vcnombre, cid From tbarea;';
-                                                $resultado_consulta_mysql=mysql_query($consulta_mysql);
-                                                while($registro = mysql_fetch_array($resultado_consulta_mysql)){
+                                                //$consulta_mysql='SELECT vcnombre, cid From tbarea;';
+                                                 $conn = new mysqli(HOST, USER, PASSWORD, DB);
+                                                 $resultado_consulta_mysql=mysqli_query($conn,"Call MostrarArea()"); 
+                                                 
+                                                 while($registro = mysqli_fetch_array($resultado_consulta_mysql)){
                                                     echo " <li><a value='".$registro['cid']."' href='#'>".$registro['vcnombre']."</a></li>";
 
-                                                } 
+                                            } 
 
-                                                return $registro['cid'];
+                                            function select_area()
+                                            {
+                                                $idArea=$registro['cid'];
+
+                                                show_Cargo($idArea);
                                             }
+
+                                            //$idArea = show_Area();
 
                                             function show_Cargo($idArea)
                                             {
                                                 
-                                                $consulta_mysql='SELECT vcnombre FROM tbcargo WHERE cidarea ='.$idArea.';';
-                                                $resultado_consulta_mysql=mysql_query($consulta_mysql);
-                                                while($registro = mysql_fetch_array($resultado_consulta_mysql)){
+                                                //$consulta_mysql='SELECT vcnombre FROM tbcargo WHERE cidarea ='.$idArea.';';
+                                               // $resultado_consulta_mysql=mysql_query($consulta_mysql);
+
+                                                $conn = new mysqli(HOST, USER, PASSWORD, DB);
+
+                                                echo "<script> alert(".$idArea.") </script>";
+                                                $resultado_consulta_mysql=mysqli_query($conn,"Call MostrarCargo('".$idArea."')"); 
+                                                while($registro = mysqli_fetch_array($resultado_consulta_mysql)){
                                                     echo " <li><a href='#'>".$registro['vcnombre']."</a></li>";
                                                 }
                                             }
-                                            show_Area();
+                                           
                                         ?>  
                                     </ul>
                                 </div> 
@@ -108,7 +127,8 @@
                                         Cargo <span class='caret'></span>
                                     </a>
                                     <ul class='dropdown-menu'>
-                                        <?php 
+                                        <?php
+
                                             show_Cargo($idArea);
                                         ?>  
                                     </ul>
