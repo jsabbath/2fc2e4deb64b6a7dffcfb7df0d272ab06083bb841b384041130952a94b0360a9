@@ -9,7 +9,8 @@
 			{
 				echo "El registro ya existe";
 			}else{
-				$meter = @mysql_query('INSERT INTO tbarea (cid, vcnombre) values ("","'.mysql_real_escape_string($vcnombre).'");');
+                $currentCount();
+				$meter = @mysql_query('Call InsertarArea ("","'.mysql_real_escape_string($vcnombre).'");');
 				if($meter)
 					{
 						
