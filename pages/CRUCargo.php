@@ -8,12 +8,12 @@
                 <h4>Cargo</h4>
             </div>
             <div>
-                <form>
+                <form role="form" action="include/regCRUCargo.php" method="POST">
                     <div class="row">
                         <div class="col-md-4" id="">
                             Area 
                         </div>
-                        <div class='col-md-8 btn-group'> 
+                        <div class='col-md-8 btn-group' name = 'cidArea'> 
                         <a class='btn btn-default dropdown-toggle btn-select' data-toggle='dropdown' href='#'>
                             Selecciona un Area <span class='caret'></span>
                         </a>
@@ -38,7 +38,7 @@
                             Observaciones 
                         </div>
                         <div class="col-md-8">
-                            <input type="text" class="form-control" placeholder="Ingrese Observaciones" id="#vcCargoNombre" required>
+                            <input type="text" class="form-control" placeholder="Ingrese Observaciones" id="#vcCargoNombre" name="vcnombreCargo" required>
                         </div>
                     </div>
                     <div class="form-group"><!--para seguridad-->

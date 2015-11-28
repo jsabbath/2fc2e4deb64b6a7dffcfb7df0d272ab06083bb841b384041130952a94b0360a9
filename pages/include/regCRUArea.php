@@ -12,7 +12,6 @@
 				$meter = @mysql_query('INSERT INTO tbarea (cid, vcnombreArea) values ("","'.mysql_real_escape_string($vcnombre).'");');
 				if($meter)
 					{
-						
 						header ("Location: .././CRUArea.php");//echo "<div>registro existoso </div>";
 						//$cid = $cid ++;
 					}else 

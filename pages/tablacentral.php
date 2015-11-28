@@ -28,7 +28,7 @@
                                 conectar('localhost', 'root', '', 'dbpjudicial');
 
                                 $consulta_mysql='SELECT P.vcnombrePersonal,P.vcApPaterno,P.vcApMaterno, A.vcnombreArea, Reg.vcdescripcion, Cont.dateinicio, Cont.datefin
-                                                From ((((tbarea A INNER JOIN tbcargo C ON  A.CId = C.CIdArea)
+                                                From ((((tbarea A INNER JOIN tbcargo C ON  A.cid = C.cidArea)
                                                 INNER JOIN tbpersonal P ON C.cid = P.cidcargo)
                                                 INNER JOIN tbcontrato Cont ON P.cid = Cont.cidpersonal)
                                                 INNER JOIN tbperiodo Period ON Cont.cidperiodo = Period.cid)

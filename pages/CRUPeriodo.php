@@ -18,7 +18,7 @@
                             Periodo:  
                         </div>
                         <div class="col-md-3 center-block">
-                            <input class="form-control" type="text" placeholder="YYYY-YYYYY" name='vcdescripcion' required>
+                            <input maxlength="9" class="form-control" type="text" placeholder="YYYY-YYYYY" name='vcdescripcion' required>
                         </div>
                     </div>
                     <br>
