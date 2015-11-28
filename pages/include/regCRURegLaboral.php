@@ -13,7 +13,7 @@ $query = @mysql_query('SELECT * FROM tbregimen WHERE vcdescripcion="'.mysql_real
 		$meter = @mysql_query('INSERT INTO tbregimen (cid, vcdescripcion, vcobservaciones) values ("","'.mysql_real_escape_string($vcdescripcion).'","'.mysql_real_escape_string($vcobservaciones).'");');
 		if($meter)
 			{
-				echo "<div>registro existoso </div>";
+				header ("Location: .././CRURegLaboral.php");
 			}else 
 				echo "ocurrio un error";
 		}
