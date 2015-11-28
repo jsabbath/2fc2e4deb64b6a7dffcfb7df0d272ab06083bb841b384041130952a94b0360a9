@@ -13,18 +13,20 @@
                         <div class="col-md-4" id="">
                             Area 
                         </div>
-                        <div class='col-md-8 btn-group'> <a class='btn btn-default dropdown-toggle btn-select' data-toggle='dropdown' href='#'>Seleciona un Area <span class='caret'></span></a>
+                        <div class='col-md-8 btn-group'> 
+                        <a class='btn btn-default dropdown-toggle btn-select' data-toggle='dropdown' href='#'>
+                            Selecciona un Area <span class='caret'></span>
+                        </a>
                             <ul class='dropdown-menu'>
                                <?php 
                                     require_once('include/funciones.php');
                                     conectar('localhost', 'root', '', 'dbpjudicial');
 
-                                    $consulta_mysql='SELECT cid,vcnombre From tbarea order by vcnombre;';
+                                    $consulta_mysql='SELECT cid,vcnombreArea From tbarea order by cid;';
                                     $resultado_consulta_mysql=mysql_query($consulta_mysql);
                                     while($registro = mysql_fetch_array($resultado_consulta_mysql)){
                                         echo " 
-                                            <li><a href='#'>".$registro['vcnombre']."</a></li>
-                                            ";
+                                            <li><a href='#' value='".$registro['cid']."'>".$registro['vcnombreArea']."</a></li>";
                                     }
                                 ?>  
                             </ul>
@@ -53,16 +55,30 @@
 	                                            <tr>
 	                                                <th>Area</th>
 	                                                <th>Nombre</th>
+                                                    <th>Opciones</th>
 	                                            </tr>
 	                                        </thead>
 	                                        <tbody>
-	                                            <tr class="odd gradeX">
-	                                                <td id="">R728</td> <!--nombre-->
-	                                                <td id="">Comprende del tipo de contrato xs</td>
-	                                                <td id="" class="center">
-	                                                    <input type="button" value="Editar" class="btn btn-danger btn-xs">
-	                                                    <input type="button" value="Exportar" class="btn btn-success btn-xs">
-	                                                </td>
+	                                            
+                                                <?php 
+                                                    require_once('include/funciones.php');
+                                                    conectar('localhost', 'root', '', 'dbpjudicial');
+
+                                                    $consulta_mysql='SELECT vcnombreArea, vcnombreCargo FROM tbcargo LEFT JOIN tbarea ON tbcargo.cidarea = tbarea.cid;';
+
+                                                    $resultado_consulta_mysql=mysql_query($consulta_mysql);
+                                                    while($registro = mysql_fetch_array($resultado_consulta_mysql)){
+                                                    echo "
+                                                        <tr class='odd gradeX'>
+                                                        <td id=''>".$registro['vcnombreArea']."</td>
+                                                        <td id=''>".$registro['vcnombreCargo']."</td>
+                                                        <td id='' class='center'>
+                                                            <input type='button' value='Editar' class='btn btn-danger btn-xs'>
+                                                            <input type='button' value='Exportar' class='btn btn-success btn-xs'>
+                                                        </td>";
+                                                    }
+                                                 ?>
+                                                    
 	                                            </tr>
 	                                        </tbody>
 	                                    </table>

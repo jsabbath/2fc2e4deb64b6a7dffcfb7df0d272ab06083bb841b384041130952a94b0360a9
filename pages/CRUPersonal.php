@@ -40,7 +40,7 @@
                                     <label for="inputError">Escalofon</label>
                                 </div>
                                 <div class='btn-group'> <!--Dropdown-->
-                                    <a class='btn btn-default dropdown-toggle btn-select' data-toggle='dropdown' href='#'>
+                                    <a class='btn btn-default dropdown-toggle btn-select' data-toggle='dropdown'>
                                         Seleccione <span class='caret'></span>
                                     </a>
                                     <ul class='dropdown-menu'>
@@ -51,7 +51,7 @@
                                             $consulta_mysql='SELECT vcdescripcion From tbregimen;';
                                             $resultado_consulta_mysql=mysql_query($consulta_mysql);
                                             while($registro = mysql_fetch_array($resultado_consulta_mysql)){
-                                                echo " <li><a href='#'>".$registro['vcdescripcion']."</a></li>";
+                                                echo " <li><a value='".$registro['cid']."'>".$registro['vcdescripcion']."</a></li>";
                                             }
                                         ?>  
                                     </ul>
@@ -82,18 +82,16 @@
                                                 $consulta_mysql='SELECT vcnombre, cid From tbarea;';
                                                 $resultado_consulta_mysql=mysql_query($consulta_mysql);
                                                 while($registro = mysql_fetch_array($resultado_consulta_mysql)){
-                                                    echo " <li><a href='#'>".$registro['vcnombre']."</a></li>";
+                                                    echo " <li><a value='".$registro['cid']."' href='#'>".$registro['vcnombre']."</a></li>";
 
                                                 } 
-                                                $idArea = $registro['cid'];
-                                                
+
+                                                return $registro['cid'];
                                             }
 
                                             function show_Cargo($idArea)
                                             {
-                                                require_once('include/funciones.php');
-                                                conectar('localhost', 'root', '', 'dbpjudicial');
-
+                                                
                                                 $consulta_mysql='SELECT vcnombre FROM tbcargo WHERE cidarea ='.$idArea.';';
                                                 $resultado_consulta_mysql=mysql_query($consulta_mysql);
                                                 while($registro = mysql_fetch_array($resultado_consulta_mysql)){

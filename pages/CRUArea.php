@@ -43,13 +43,13 @@
                                                     require_once('include/funciones.php');
                                                     conectar('localhost', 'root', '', 'dbpjudicial');
 
-                                                    $consulta_mysql='SELECT cid,vcnombre From tbarea order by cid;';
+                                                    $consulta_mysql='SELECT cid,vcnombreArea From tbarea order by cid;';
                                                     $resultado_consulta_mysql=mysql_query($consulta_mysql);
                                                     while($registro = mysql_fetch_array($resultado_consulta_mysql)){
                                                         echo "
                                                             <tr class='odd gradeX'>
                                                                 <td id=''>".$registro["cid"]."</td>
-                                                                <td id=''>".$registro["vcnombre"]."</td>
+                                                                <td id=''>".$registro["vcnombreArea"]."</td>
                                                                 <td id='' class='center'>
                                                                     <input type='button' value='Editar' class='btn btn-danger btn-xs'>
                                                                     <input type='button' value='Deshabilitar' class='btn btn-success btn-xs'>
