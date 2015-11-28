@@ -18,7 +18,7 @@
     	elseif($apellido1==NULL || $apellido1=="")
     	{
     		echo "<p class='text-danger'>Ingresar Primer Apellido</p>";
-    	}
+    	
     	elseif($apellido2==NULL || $apellido2=="")
     	{
     		echo "<p class='text-danger'>Ingresar Segundo Apellido</p>";
@@ -35,7 +35,7 @@
         {
             $conn = new mysqli($HOST, $USER, $PASSWORD, $DB);
 
-        mysqli_query(conn,'Call InsertarPersonal("'.$codigopersonal.'","'.$nombres.'","'.$nombres.'","'$apellido1'","'.$apellido2.'","'.$scalafon.'","'.$dni.'")' ;);
+        mysqli_query(conn,'Call InsertarPersonal("'.$codigopersonal.'","'.$nombres.'","'.$nombres.'","'$apellido1'","'.$apellido2.'","'.$scalafon.'","'.$dni.'")');
         } 
     }
 ?>

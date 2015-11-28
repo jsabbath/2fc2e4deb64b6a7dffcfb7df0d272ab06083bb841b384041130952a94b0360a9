@@ -1,6 +1,7 @@
+  
   <?php include('header.php'); ?>
   <?php include('modals.php'); ?>
-
+   <?php include('include/config.php'); ?>
   <div class="row">
     <!--modal Registrar Area-->
     <div>
@@ -40,16 +41,22 @@
                                             </thead>
                                             <tbody>
                                                 <?php 
-                                                    require_once('include/funciones.php');
-                                                    conectar('localhost', 'root', '', 'dbpjudicial');
+                                                    //require_once('include/funciones.php');
+                                                    //conectar('localhost', 'root', '', 'dbpjudicial');
 
-                                                    $consulta_mysql='SELECT cid,vcnombreArea From tbarea order by cid;';
-                                                    $resultado_consulta_mysql=mysql_query($consulta_mysql);
-                                                    while($registro = mysql_fetch_array($resultado_consulta_mysql)){
+                                                    //$consulta_mysql='SELECT cid,vcnombreArea From tbarea order by cid;';
+
+                                                    $conn = new mysqli(HOST, USER, PASSWORD, DB);
+                                                     
+
+
+                                                    $resultado_consulta_mysql=mysqli_query($conn,"Call MostrarArea()"); 
+                                                    while($registro = mysqli_fetch_array($resultado_consulta_mysql))
+                                                    {
                                                         echo "
                                                             <tr class='odd gradeX'>
                                                                 <td id=''>".$registro["cid"]."</td>
-                                                                <td id=''>".$registro["vcnombreArea"]."</td>
+                                                                <td id=''>".$registro["vcnombre"]."</td>
                                                                 <td id='' class='center'>
                                                                     <input type='button' value='Editar' class='btn btn-danger btn-xs'>
                                                                     <input type='button' value='Deshabilitar' class='btn btn-success btn-xs'>
