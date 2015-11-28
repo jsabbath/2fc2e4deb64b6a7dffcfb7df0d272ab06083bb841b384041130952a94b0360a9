@@ -27,7 +27,7 @@
                                 require_once('include/funciones.php');
                                 conectar('localhost', 'root', '', 'dbpjudicial');
 
-                                $consulta_mysql='SELECT P.vcnombrePersonal,P.vcApPaterno,P.vcApMaterno, A.vcnombre, Reg.vcdescripcion, Cont.dateinicio, Cont.datefin
+                                $consulta_mysql='SELECT P.vcnombrePersonal,P.vcApPaterno,P.vcApMaterno, A.vcnombreArea, Reg.vcdescripcion, Cont.dateinicio, Cont.datefin
                                                 From ((((tbarea A INNER JOIN tbcargo C ON  A.CId = C.CIdArea)
                                                 INNER JOIN tbpersonal P ON C.cid = P.cidcargo)
                                                 INNER JOIN tbcontrato Cont ON P.cid = Cont.cidpersonal)
@@ -39,7 +39,7 @@
                                     echo " 
                                         <tr class='odd gradeX'>
                                         <td class='mayuscula'>".$registro["vcnombrePersonal"]." ".$registro["vcApPaterno"]." ".$registro["vcApMaterno"]."</td>
-                                        <td class='mayuscula'>".$registro["vcnombre"]." / ".$registro["vcdescripcion"]."</td>
+                                        <td class='mayuscula'>".$registro["vcnombreArea"]." / ".$registro["vcdescripcion"]."</td>
                                         <td id=''>".$registro["dateinicio"]."</td>
                                         <td id='' class='center'>".$registro["datefin"]."</td>
                                         <td id='' class='center'>
