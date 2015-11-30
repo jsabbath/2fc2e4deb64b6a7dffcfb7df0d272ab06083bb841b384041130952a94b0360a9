@@ -14,7 +14,6 @@
 					{
 						//header ("Location: .././CRUArea.php");
 						//echo "<div>registro existoso </div>";
-						
 						header ("Location: .././CRUArea.php");
 						//$cid = $cid ++;
 					}else 

@@ -40,22 +40,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <?php 
-                                                    require_once('include/funciones.php');
-                                                    conectar('localhost', 'root', '', 'dbpjudicial');
-
-                                                    $consulta_mysql='SELECT * FROM tbperiodo';
-                                                    $resultado_consulta_mysql=mysql_query($consulta_mysql);
-                                                    while($registro = mysql_fetch_array($resultado_consulta_mysql)){
-                                                        echo " <tr class='odd gradeX'>
-                                                                    <td id=''>".$registro['vcdescripcion']."</td>
-                                                                    <td id='' class='center'>
-                                                                        <input type='button' value='Editar' class='btn btn-danger btn-xs'>
-                                                                        <input type='button' value='Exportar' class='btn btn-success btn-xs'>
-                                                                    </td>
-                                                                </tr>";
-                                                    }
-                                                ?> 
+                                                 <?php include('include/tablas/tablaPeriodo.php');?>
                                             </tbody>
                                         </table>
                                     </div>

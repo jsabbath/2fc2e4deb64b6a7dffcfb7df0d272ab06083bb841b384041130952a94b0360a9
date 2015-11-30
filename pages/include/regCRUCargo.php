@@ -13,7 +13,7 @@
 				$meter = @mysql_query('INSERT INTO tbcargo (cid, cidarea ,vcnombreCargo) values (""."'.$cidArea.'","'.mysql_real_escape_string($vcnombreCargo).'");');
 				if($meter)
 					{
-						header ("Location: .././CRUArea.php");//echo "<div>registro existoso </div>";
+						header ("Location: .././CRUCargo.php");//echo "<div>registro existoso </div>";
 						//$cid = $cid ++;
 					}else 
 						echo $cid;

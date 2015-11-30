@@ -10,15 +10,11 @@
             <div>
                 <form role="form" action="include/regCRUCargo.php" method="POST">
                     <div class="row">
-                        <div class="col-md-4" id="">
+                        <div class="col-md-1" id="">
                             Area 
                         </div>
-                        <div class='col-md-8 btn-group'> 
-                        <!--a class='btn btn-default dropdown-toggle btn-select' data-toggle='dropdown' href='#'>
-                            Selecciona un Area <span class='caret'></span>
-                        </a-->
-                            <!--ul class='dropdown-menu' name = 'cidArea'-->
-                            <select name="cidArea">
+                        <div class='col-md-4 btn-group'> 
+                            <select name="cidArea" class="btn btn-default">
                                <?php 
                                     require_once('include/funciones.php');
                                     conectar('localhost', 'root', '', 'dbpjudicial');
@@ -26,11 +22,9 @@
                                     $consulta_mysql='SELECT cid,vcnombreArea From tbarea order by cid;';
                                     $resultado_consulta_mysql=mysql_query($consulta_mysql);
                                     while($registro = mysql_fetch_array($resultado_consulta_mysql)){
-                                        //<li><a href='#' value='".$registro['cid']."'>".$registro['vcnombreArea']."</a></li>";
                                         echo " 
                                             <option value='".$registro['cid']."'>".$registro['vcnombreArea']."</option>
                                         ";
-                                            
                                     }
                                 ?>  
                             </ul>
@@ -38,10 +32,10 @@
                     </div>
                     <br>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-1">
                             Observaciones 
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-4">
                             <input type="text" class="form-control" placeholder="Ingrese Observaciones" id="#vcCargoNombre" name="vcnombreCargo" required>
                         </div>
                     </div>
@@ -63,26 +57,7 @@
 	                                            </tr>
 	                                        </thead>
 	                                        <tbody>
-	                                            
-                                                <?php 
-                                                    require_once('include/funciones.php');
-                                                    conectar('localhost', 'root', '', 'dbpjudicial');
-
-                                                    $consulta_mysql='SELECT vcnombreArea, vcnombreCargo FROM tbcargo LEFT JOIN tbarea ON tbcargo.cidarea = tbarea.cid;';
-
-                                                    $resultado_consulta_mysql=mysql_query($consulta_mysql);
-                                                    while($registro = mysql_fetch_array($resultado_consulta_mysql)){
-                                                    echo "
-                                                        <tr class='odd gradeX'>
-                                                        <td id=''>".$registro['vcnombreArea']."</td>
-                                                        <td id=''>".$registro['vcnombreCargo']."</td>
-                                                        <td id='' class='center'>
-                                                            <input type='button' value='Editar' class='btn btn-danger btn-xs'>
-                                                            <input type='button' value='Exportar' class='btn btn-success btn-xs'>
-                                                        </td>";
-                                                    }
-                                                 ?>
-                                                    
+	                                            <?php include('include/tablas/tablaCargo.php'); ?>                                                    
 	                                            </tr>
 	                                        </tbody>
 	                                    </table>
@@ -95,7 +70,7 @@
 	                </div>
 	                <div>
 	                	<input type="submit" value="Guardar" class="btn btn-primary">
-	                	<input type='reset' value="Limpiar">
+	                	<input type='reset' value="Limpiar" class="btn btn-default">
 	                	<input type="button" class="btn btn-warning" value='Actualizar'>
 		                <a class="btn btn-danger" value="cerrar" href='tables.php'>Salir</a>
 		            </div>
