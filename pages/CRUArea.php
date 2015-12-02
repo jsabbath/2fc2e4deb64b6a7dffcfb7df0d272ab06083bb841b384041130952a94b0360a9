@@ -1,4 +1,4 @@
-  
+<!--area-->  
   <?php include('header.php'); ?>
   <?php include('modals.php'); ?>
   <div class="row">
