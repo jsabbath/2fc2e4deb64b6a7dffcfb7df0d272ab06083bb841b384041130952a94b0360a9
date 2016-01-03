@@ -8,8 +8,8 @@
         echo " <tr class='odd gradeX'>
                     <td id=''>".$registro['vcdescripcion']."</td>
                     <td id='' class='center'>
-                        <a class='btn btn-warning btn-xs' href='include/actualizarPeriodo.php?cid=".$registro["cid"]."'>Actualizar</a>
-                        <a class='btn btn-danger btn-xs' href='include/eliminarPeriodo.php?cid=".$registro["cid"]."'>Eliminar</a>
+                        <a class='btn btn-warning btn-xs' href='././actualizarPeriodo.php?cid=".$registro["cid"]."'>Actualizar</a>
+                        <a class='btn btn-danger btn-xs' href='./include/eliminarPeriodo.php?cid=".$registro["cid"]."'>Eliminar</a>
                     </td>
                 </tr>";
     }

@@ -15,7 +15,7 @@
                 <form action="include/regCRUPeriodo.php" method="POST">
                     <div>
                         <div class="col-md-2">
-                            Periodo:  
+                            Fecha de Inicio/Fin:  
                         </div>
                         <div class="col-md-3 center-block">
                             <input maxlength="9" class="form-control" type="text" placeholder="YYYY-YYYYY" name='vcdescripcion' required>
